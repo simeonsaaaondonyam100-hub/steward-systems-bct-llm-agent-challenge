@@ -1,0 +1,14 @@
+{
+  "num_users": 16,
+  "metrics": {
+    "hit_rate@5": 0.25,
+    "hit_rate@10": 0.5625,
+    "ndcg@5": 0.164,
+    "ndcg@10": 0.252
+  },
+  "k_values": [
+    5,
+    10
+  ],
+  "notes": "Positive items are sample reviews with rating >= 4."
+}

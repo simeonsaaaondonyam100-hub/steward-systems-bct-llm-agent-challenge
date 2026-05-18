@@ -1,0 +1,1122 @@
+[
+  {
+    "review_id": "review_001",
+    "user_id": "user_001",
+    "item_id": "item_001",
+    "rating": 5,
+    "review": "Spicy Chicken Shawarma really matched my taste. The shawarma angle worked, portion was medium, and the price felt fair for the experience."
+  },
+  {
+    "review_id": "review_002",
+    "user_id": "user_001",
+    "item_id": "item_006",
+    "rating": 5,
+    "review": "Bole and Fish Combo really matched my taste. The bole angle worked, portion was large, and the price felt fair for the experience."
+  },
+  {
+    "review_id": "review_003",
+    "user_id": "user_001",
+    "item_id": "item_011",
+    "rating": 4,
+    "review": "Grilled Chicken Salad Bowl was a good pick. I liked the healthy feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_004",
+    "user_id": "user_001",
+    "item_id": "item_016",
+    "rating": 5,
+    "review": "Puff-Puff Sharing Bowl really matched my taste. The puff-puff angle worked, portion was sharing, and the price felt fair for the experience."
+  },
+  {
+    "review_id": "review_005",
+    "user_id": "user_001",
+    "item_id": "item_021",
+    "rating": 4,
+    "review": "Office Lunch Rice Bowl was a good pick. I liked the office lunch feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_006",
+    "user_id": "user_001",
+    "item_id": "item_026",
+    "rating": 5,
+    "review": "Zobo Ginger Bottle really matched my taste. The zobo angle worked, portion was single, and the price felt fair for the experience."
+  },
+  {
+    "review_id": "review_007",
+    "user_id": "user_001",
+    "item_id": "item_031",
+    "rating": 4,
+    "review": "Fresh Orange Juice was a good pick. I liked the juice feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_008",
+    "user_id": "user_001",
+    "item_id": "item_036",
+    "rating": 4,
+    "review": "Student Grocery Starter Pack was a good pick. I liked the grocery feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_009",
+    "user_id": "user_001",
+    "item_id": "item_041",
+    "rating": 4,
+    "review": "Nigerian Campus Love Stories was a good pick. I liked the campus feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_010",
+    "user_id": "user_001",
+    "item_id": "item_046",
+    "rating": 3,
+    "review": "Nigerian Startup Playbook was okay, not bad but not outstanding. The price around NGN 7,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_011",
+    "user_id": "user_002",
+    "item_id": "item_008",
+    "rating": 3,
+    "review": "Small Chops Box was okay, not bad but not outstanding. The price around NGN 6,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_012",
+    "user_id": "user_002",
+    "item_id": "item_013",
+    "rating": 3,
+    "review": "Ofada Rice and Ayamase was okay, not bad but not outstanding. The price around NGN 4,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_013",
+    "user_id": "user_002",
+    "item_id": "item_018",
+    "rating": 3,
+    "review": "Beans and Plantain Bowl was okay, not bad but not outstanding. The price around NGN 2,400 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_014",
+    "user_id": "user_002",
+    "item_id": "item_023",
+    "rating": 2,
+    "review": "Smoky Party Jollof Tray did not fully work for me. Delivery, portion, or value felt off, so I expected more for the money."
+  },
+  {
+    "review_id": "review_015",
+    "user_id": "user_002",
+    "item_id": "item_028",
+    "rating": 3,
+    "review": "Tiger Nut Drink was okay, not bad but not outstanding. The price around NGN 1,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_016",
+    "user_id": "user_002",
+    "item_id": "item_033",
+    "rating": 3,
+    "review": "Reusable Food Flask was okay, not bad but not outstanding. The price around NGN 7,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_017",
+    "user_id": "user_002",
+    "item_id": "item_038",
+    "rating": 3,
+    "review": "Mosquito Repellent Kit was okay, not bad but not outstanding. The price around NGN 4,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_018",
+    "user_id": "user_002",
+    "item_id": "item_043",
+    "rating": 3,
+    "review": "Personal Finance for Young Nigerians was okay, not bad but not outstanding. The price around NGN 5,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_019",
+    "user_id": "user_002",
+    "item_id": "item_048",
+    "rating": 3,
+    "review": "Nollywood Family Comedy was okay, not bad but not outstanding. The price around NGN 2,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_020",
+    "user_id": "user_002",
+    "item_id": "item_053",
+    "rating": 3,
+    "review": "Date Night Dessert Box was okay, not bad but not outstanding. The price around NGN 9,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_021",
+    "user_id": "user_003",
+    "item_id": "item_015",
+    "rating": 4,
+    "review": "Meat Pie Duo was a good pick. I liked the meat pie feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_022",
+    "user_id": "user_003",
+    "item_id": "item_020",
+    "rating": 4,
+    "review": "Premium Sushi Box was a good pick. I liked the sushi feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_023",
+    "user_id": "user_003",
+    "item_id": "item_025",
+    "rating": 4,
+    "review": "Chicken Pepper Soup Bowl was a good pick. I liked the pepper soup feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_024",
+    "user_id": "user_003",
+    "item_id": "item_030",
+    "rating": 4,
+    "review": "Kunu Bottle was a good pick. I liked the kunu feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_025",
+    "user_id": "user_003",
+    "item_id": "item_035",
+    "rating": 4,
+    "review": "Rechargeable Standing Fan was a good pick. I liked the fan feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_026",
+    "user_id": "user_003",
+    "item_id": "item_040",
+    "rating": 4,
+    "review": "Budget Data Router was a good pick. I liked the router feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_027",
+    "user_id": "user_003",
+    "item_id": "item_045",
+    "rating": 4,
+    "review": "African Sci-Fi Short Stories was a good pick. I liked the sci-fi feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_028",
+    "user_id": "user_003",
+    "item_id": "item_050",
+    "rating": 4,
+    "review": "Afrobeats Concert Stream was a good pick. I liked the music feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_029",
+    "user_id": "user_003",
+    "item_id": "item_055",
+    "rating": 4,
+    "review": "Yam Porridge Bowl was a good pick. I liked the yam feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_030",
+    "user_id": "user_003",
+    "item_id": "item_060",
+    "rating": 4,
+    "review": "Palm Wine Bottle was a good pick. I liked the palm wine feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_031",
+    "user_id": "user_004",
+    "item_id": "item_022",
+    "rating": 4,
+    "review": "Family Pepperless Chicken Stew was a good pick. I liked the family feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_032",
+    "user_id": "user_004",
+    "item_id": "item_027",
+    "rating": 4,
+    "review": "Classic Chapman was a good pick. I liked the chapman feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_033",
+    "user_id": "user_004",
+    "item_id": "item_032",
+    "rating": 4,
+    "review": "Ginger Pineapple Juice was a good pick. I liked the ginger feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_034",
+    "user_id": "user_004",
+    "item_id": "item_037",
+    "rating": 4,
+    "review": "Power Bank 20000mAh was a good pick. I liked the power bank feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_035",
+    "user_id": "user_004",
+    "item_id": "item_042",
+    "rating": 4,
+    "review": "Things Fall Apart Paperback was a good pick. I liked the classic feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_036",
+    "user_id": "user_004",
+    "item_id": "item_047",
+    "rating": 4,
+    "review": "Lagos Noir Movie Night was a good pick. I liked the thriller feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_037",
+    "user_id": "user_004",
+    "item_id": "item_052",
+    "rating": 3,
+    "review": "Office Birthday Cake was okay, not bad but not outstanding. The price around NGN 18,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_038",
+    "user_id": "user_004",
+    "item_id": "item_057",
+    "rating": 4,
+    "review": "Plantain Chips Multipack was a good pick. I liked the plantain chips feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_039",
+    "user_id": "user_004",
+    "item_id": "item_002",
+    "rating": 4,
+    "review": "Jollof Rice and Grilled Chicken was a good pick. I liked the jollof feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_040",
+    "user_id": "user_004",
+    "item_id": "item_007",
+    "rating": 3,
+    "review": "Fried Rice Party Pack was okay, not bad but not outstanding. The price around NGN 14,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_041",
+    "user_id": "user_005",
+    "item_id": "item_029",
+    "rating": 4,
+    "review": "Cold Malt Pack was a good pick. I liked the malt feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_042",
+    "user_id": "user_005",
+    "item_id": "item_034",
+    "rating": 3,
+    "review": "Budget Android Earbuds was okay, not bad but not outstanding. The price around NGN 9,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_043",
+    "user_id": "user_005",
+    "item_id": "item_039",
+    "rating": 3,
+    "review": "Non-Stick Frying Pan was okay, not bad but not outstanding. The price around NGN 12,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_044",
+    "user_id": "user_005",
+    "item_id": "item_044",
+    "rating": 3,
+    "review": "Lagos Food Memoir was okay, not bad but not outstanding. The price around NGN 4,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_045",
+    "user_id": "user_005",
+    "item_id": "item_049",
+    "rating": 3,
+    "review": "Documentary on Lagos Food Markets was okay, not bad but not outstanding. The price around NGN 1,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_046",
+    "user_id": "user_005",
+    "item_id": "item_054",
+    "rating": 4,
+    "review": "Kilishi Snack Pack was a good pick. I liked the kilishi feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_047",
+    "user_id": "user_005",
+    "item_id": "item_059",
+    "rating": 3,
+    "review": "Low Sugar Greek Yoghurt was okay, not bad but not outstanding. The price around NGN 2,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_048",
+    "user_id": "user_005",
+    "item_id": "item_004",
+    "rating": 4,
+    "review": "Suya Platter with Yaji was a good pick. I liked the suya feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_049",
+    "user_id": "user_005",
+    "item_id": "item_009",
+    "rating": 4,
+    "review": "Asun with Fried Plantain was a good pick. I liked the asun feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_050",
+    "user_id": "user_005",
+    "item_id": "item_014",
+    "rating": 3,
+    "review": "Akara and Custard Combo was okay, not bad but not outstanding. The price around NGN 1,700 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_051",
+    "user_id": "user_006",
+    "item_id": "item_036",
+    "rating": 4,
+    "review": "Student Grocery Starter Pack was a good pick. I liked the grocery feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_052",
+    "user_id": "user_006",
+    "item_id": "item_041",
+    "rating": 3,
+    "review": "Nigerian Campus Love Stories was okay, not bad but not outstanding. The price around NGN 3,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_053",
+    "user_id": "user_006",
+    "item_id": "item_046",
+    "rating": 3,
+    "review": "Nigerian Startup Playbook was okay, not bad but not outstanding. The price around NGN 7,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_054",
+    "user_id": "user_006",
+    "item_id": "item_051",
+    "rating": 3,
+    "review": "Northern Nigeria Travel Documentary was okay, not bad but not outstanding. The price around NGN 2,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_055",
+    "user_id": "user_006",
+    "item_id": "item_056",
+    "rating": 3,
+    "review": "Coconut Rice and Turkey was okay, not bad but not outstanding. The price around NGN 4,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_056",
+    "user_id": "user_006",
+    "item_id": "item_001",
+    "rating": 3,
+    "review": "Spicy Chicken Shawarma was okay, not bad but not outstanding. The price around NGN 2,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_057",
+    "user_id": "user_006",
+    "item_id": "item_006",
+    "rating": 3,
+    "review": "Bole and Fish Combo was okay, not bad but not outstanding. The price around NGN 3,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_058",
+    "user_id": "user_006",
+    "item_id": "item_011",
+    "rating": 3,
+    "review": "Grilled Chicken Salad Bowl was okay, not bad but not outstanding. The price around NGN 4,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_059",
+    "user_id": "user_006",
+    "item_id": "item_016",
+    "rating": 3,
+    "review": "Puff-Puff Sharing Bowl was okay, not bad but not outstanding. The price around NGN 2,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_060",
+    "user_id": "user_006",
+    "item_id": "item_021",
+    "rating": 3,
+    "review": "Office Lunch Rice Bowl was okay, not bad but not outstanding. The price around NGN 3,600 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_061",
+    "user_id": "user_007",
+    "item_id": "item_043",
+    "rating": 4,
+    "review": "Personal Finance for Young Nigerians was a good pick. I liked the finance feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_062",
+    "user_id": "user_007",
+    "item_id": "item_048",
+    "rating": 4,
+    "review": "Nollywood Family Comedy was a good pick. I liked the comedy feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_063",
+    "user_id": "user_007",
+    "item_id": "item_053",
+    "rating": 3,
+    "review": "Date Night Dessert Box was okay, not bad but not outstanding. The price around NGN 9,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_064",
+    "user_id": "user_007",
+    "item_id": "item_058",
+    "rating": 3,
+    "review": "Office Snack Basket was okay, not bad but not outstanding. The price around NGN 11,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_065",
+    "user_id": "user_007",
+    "item_id": "item_003",
+    "rating": 3,
+    "review": "Amala with Ewedu and Gbegiri was okay, not bad but not outstanding. The price around NGN 2,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_066",
+    "user_id": "user_007",
+    "item_id": "item_008",
+    "rating": 3,
+    "review": "Small Chops Box was okay, not bad but not outstanding. The price around NGN 6,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_067",
+    "user_id": "user_007",
+    "item_id": "item_013",
+    "rating": 3,
+    "review": "Ofada Rice and Ayamase was okay, not bad but not outstanding. The price around NGN 4,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_068",
+    "user_id": "user_007",
+    "item_id": "item_018",
+    "rating": 3,
+    "review": "Beans and Plantain Bowl was okay, not bad but not outstanding. The price around NGN 2,400 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_069",
+    "user_id": "user_007",
+    "item_id": "item_023",
+    "rating": 3,
+    "review": "Smoky Party Jollof Tray was okay, not bad but not outstanding. The price around NGN 16,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_070",
+    "user_id": "user_007",
+    "item_id": "item_028",
+    "rating": 3,
+    "review": "Tiger Nut Drink was okay, not bad but not outstanding. The price around NGN 1,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_071",
+    "user_id": "user_008",
+    "item_id": "item_050",
+    "rating": 4,
+    "review": "Afrobeats Concert Stream was a good pick. I liked the music feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_072",
+    "user_id": "user_008",
+    "item_id": "item_055",
+    "rating": 4,
+    "review": "Yam Porridge Bowl was a good pick. I liked the yam feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_073",
+    "user_id": "user_008",
+    "item_id": "item_060",
+    "rating": 3,
+    "review": "Palm Wine Bottle was okay, not bad but not outstanding. The price around NGN 1,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_074",
+    "user_id": "user_008",
+    "item_id": "item_005",
+    "rating": 3,
+    "review": "Catfish Pepper Soup was okay, not bad but not outstanding. The price around NGN 4,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_075",
+    "user_id": "user_008",
+    "item_id": "item_010",
+    "rating": 3,
+    "review": "Moi Moi and Pap Breakfast was okay, not bad but not outstanding. The price around NGN 1,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_076",
+    "user_id": "user_008",
+    "item_id": "item_015",
+    "rating": 3,
+    "review": "Meat Pie Duo was okay, not bad but not outstanding. The price around NGN 1,600 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_077",
+    "user_id": "user_008",
+    "item_id": "item_020",
+    "rating": 3,
+    "review": "Premium Sushi Box was okay, not bad but not outstanding. The price around NGN 18,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_078",
+    "user_id": "user_008",
+    "item_id": "item_025",
+    "rating": 3,
+    "review": "Chicken Pepper Soup Bowl was okay, not bad but not outstanding. The price around NGN 3,900 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_079",
+    "user_id": "user_008",
+    "item_id": "item_030",
+    "rating": 3,
+    "review": "Kunu Bottle was okay, not bad but not outstanding. The price around NGN 800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_080",
+    "user_id": "user_008",
+    "item_id": "item_035",
+    "rating": 3,
+    "review": "Rechargeable Standing Fan was okay, not bad but not outstanding. The price around NGN 32,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_081",
+    "user_id": "user_009",
+    "item_id": "item_057",
+    "rating": 3,
+    "review": "Plantain Chips Multipack was okay, not bad but not outstanding. The price around NGN 3,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_082",
+    "user_id": "user_009",
+    "item_id": "item_002",
+    "rating": 3,
+    "review": "Jollof Rice and Grilled Chicken was okay, not bad but not outstanding. The price around NGN 3,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_083",
+    "user_id": "user_009",
+    "item_id": "item_007",
+    "rating": 3,
+    "review": "Fried Rice Party Pack was okay, not bad but not outstanding. The price around NGN 14,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_084",
+    "user_id": "user_009",
+    "item_id": "item_012",
+    "rating": 3,
+    "review": "Egusi Soup and Pounded Yam was okay, not bad but not outstanding. The price around NGN 4,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_085",
+    "user_id": "user_009",
+    "item_id": "item_017",
+    "rating": 4,
+    "review": "Grilled Chicken and Plantain was a good pick. I liked the grilled chicken feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_086",
+    "user_id": "user_009",
+    "item_id": "item_022",
+    "rating": 3,
+    "review": "Family Pepperless Chicken Stew was okay, not bad but not outstanding. The price around NGN 9,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_087",
+    "user_id": "user_009",
+    "item_id": "item_027",
+    "rating": 3,
+    "review": "Classic Chapman was okay, not bad but not outstanding. The price around NGN 1,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_088",
+    "user_id": "user_009",
+    "item_id": "item_032",
+    "rating": 3,
+    "review": "Ginger Pineapple Juice was okay, not bad but not outstanding. The price around NGN 1,600 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_089",
+    "user_id": "user_009",
+    "item_id": "item_037",
+    "rating": 3,
+    "review": "Power Bank 20000mAh was okay, not bad but not outstanding. The price around NGN 18,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_090",
+    "user_id": "user_009",
+    "item_id": "item_042",
+    "rating": 3,
+    "review": "Things Fall Apart Paperback was okay, not bad but not outstanding. The price around NGN 4,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_091",
+    "user_id": "user_010",
+    "item_id": "item_004",
+    "rating": 4,
+    "review": "Suya Platter with Yaji was a good pick. I liked the suya feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_092",
+    "user_id": "user_010",
+    "item_id": "item_009",
+    "rating": 4,
+    "review": "Asun with Fried Plantain was a good pick. I liked the asun feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_093",
+    "user_id": "user_010",
+    "item_id": "item_014",
+    "rating": 4,
+    "review": "Akara and Custard Combo was a good pick. I liked the akara feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_094",
+    "user_id": "user_010",
+    "item_id": "item_019",
+    "rating": 4,
+    "review": "Seafood Okra Soup was a good pick. I liked the seafood feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_095",
+    "user_id": "user_010",
+    "item_id": "item_024",
+    "rating": 4,
+    "review": "Ewa Agoyin and Agege Bread was a good pick. I liked the ewa agoyin feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_096",
+    "user_id": "user_010",
+    "item_id": "item_029",
+    "rating": 4,
+    "review": "Cold Malt Pack was a good pick. I liked the malt feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_097",
+    "user_id": "user_010",
+    "item_id": "item_034",
+    "rating": 4,
+    "review": "Budget Android Earbuds was a good pick. I liked the earbuds feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_098",
+    "user_id": "user_010",
+    "item_id": "item_039",
+    "rating": 4,
+    "review": "Non-Stick Frying Pan was a good pick. I liked the kitchen feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_099",
+    "user_id": "user_010",
+    "item_id": "item_044",
+    "rating": 4,
+    "review": "Lagos Food Memoir was a good pick. I liked the food feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_100",
+    "user_id": "user_010",
+    "item_id": "item_049",
+    "rating": 4,
+    "review": "Documentary on Lagos Food Markets was a good pick. I liked the documentary feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_101",
+    "user_id": "user_011",
+    "item_id": "item_011",
+    "rating": 3,
+    "review": "Grilled Chicken Salad Bowl was okay, not bad but not outstanding. The price around NGN 4,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_102",
+    "user_id": "user_011",
+    "item_id": "item_016",
+    "rating": 3,
+    "review": "Puff-Puff Sharing Bowl was okay, not bad but not outstanding. The price around NGN 2,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_103",
+    "user_id": "user_011",
+    "item_id": "item_021",
+    "rating": 4,
+    "review": "Office Lunch Rice Bowl was a good pick. I liked the office lunch feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_104",
+    "user_id": "user_011",
+    "item_id": "item_026",
+    "rating": 3,
+    "review": "Zobo Ginger Bottle was okay, not bad but not outstanding. The price around NGN 900 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_105",
+    "user_id": "user_011",
+    "item_id": "item_031",
+    "rating": 3,
+    "review": "Fresh Orange Juice was okay, not bad but not outstanding. The price around NGN 1,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_106",
+    "user_id": "user_011",
+    "item_id": "item_036",
+    "rating": 3,
+    "review": "Student Grocery Starter Pack was okay, not bad but not outstanding. The price around NGN 8,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_107",
+    "user_id": "user_011",
+    "item_id": "item_041",
+    "rating": 3,
+    "review": "Nigerian Campus Love Stories was okay, not bad but not outstanding. The price around NGN 3,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_108",
+    "user_id": "user_011",
+    "item_id": "item_046",
+    "rating": 3,
+    "review": "Nigerian Startup Playbook was okay, not bad but not outstanding. The price around NGN 7,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_109",
+    "user_id": "user_011",
+    "item_id": "item_051",
+    "rating": 3,
+    "review": "Northern Nigeria Travel Documentary was okay, not bad but not outstanding. The price around NGN 2,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_110",
+    "user_id": "user_011",
+    "item_id": "item_056",
+    "rating": 3,
+    "review": "Coconut Rice and Turkey was okay, not bad but not outstanding. The price around NGN 4,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_111",
+    "user_id": "user_012",
+    "item_id": "item_018",
+    "rating": 4,
+    "review": "Beans and Plantain Bowl was a good pick. I liked the beans feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_112",
+    "user_id": "user_012",
+    "item_id": "item_023",
+    "rating": 4,
+    "review": "Smoky Party Jollof Tray was a good pick. I liked the jollof feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_113",
+    "user_id": "user_012",
+    "item_id": "item_028",
+    "rating": 4,
+    "review": "Tiger Nut Drink was a good pick. I liked the tigernut feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_114",
+    "user_id": "user_012",
+    "item_id": "item_033",
+    "rating": 4,
+    "review": "Reusable Food Flask was a good pick. I liked the flask feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_115",
+    "user_id": "user_012",
+    "item_id": "item_038",
+    "rating": 4,
+    "review": "Mosquito Repellent Kit was a good pick. I liked the home feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_116",
+    "user_id": "user_012",
+    "item_id": "item_043",
+    "rating": 4,
+    "review": "Personal Finance for Young Nigerians was a good pick. I liked the finance feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_117",
+    "user_id": "user_012",
+    "item_id": "item_048",
+    "rating": 4,
+    "review": "Nollywood Family Comedy was a good pick. I liked the comedy feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_118",
+    "user_id": "user_012",
+    "item_id": "item_053",
+    "rating": 4,
+    "review": "Date Night Dessert Box was a good pick. I liked the dessert feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_119",
+    "user_id": "user_012",
+    "item_id": "item_058",
+    "rating": 4,
+    "review": "Office Snack Basket was a good pick. I liked the snacks feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_120",
+    "user_id": "user_012",
+    "item_id": "item_003",
+    "rating": 4,
+    "review": "Amala with Ewedu and Gbegiri was a good pick. I liked the amala feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_121",
+    "user_id": "user_013",
+    "item_id": "item_025",
+    "rating": 3,
+    "review": "Chicken Pepper Soup Bowl was okay, not bad but not outstanding. The price around NGN 3,900 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_122",
+    "user_id": "user_013",
+    "item_id": "item_030",
+    "rating": 3,
+    "review": "Kunu Bottle was okay, not bad but not outstanding. The price around NGN 800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_123",
+    "user_id": "user_013",
+    "item_id": "item_035",
+    "rating": 2,
+    "review": "Rechargeable Standing Fan did not fully work for me. Delivery, portion, or value felt off, so I expected more for the money."
+  },
+  {
+    "review_id": "review_124",
+    "user_id": "user_013",
+    "item_id": "item_040",
+    "rating": 3,
+    "review": "Budget Data Router was okay, not bad but not outstanding. The price around NGN 28,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_125",
+    "user_id": "user_013",
+    "item_id": "item_045",
+    "rating": 3,
+    "review": "African Sci-Fi Short Stories was okay, not bad but not outstanding. The price around NGN 5,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_126",
+    "user_id": "user_013",
+    "item_id": "item_050",
+    "rating": 3,
+    "review": "Afrobeats Concert Stream was okay, not bad but not outstanding. The price around NGN 3,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_127",
+    "user_id": "user_013",
+    "item_id": "item_055",
+    "rating": 3,
+    "review": "Yam Porridge Bowl was okay, not bad but not outstanding. The price around NGN 2,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_128",
+    "user_id": "user_013",
+    "item_id": "item_060",
+    "rating": 3,
+    "review": "Palm Wine Bottle was okay, not bad but not outstanding. The price around NGN 1,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_129",
+    "user_id": "user_013",
+    "item_id": "item_005",
+    "rating": 3,
+    "review": "Catfish Pepper Soup was okay, not bad but not outstanding. The price around NGN 4,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_130",
+    "user_id": "user_013",
+    "item_id": "item_010",
+    "rating": 3,
+    "review": "Moi Moi and Pap Breakfast was okay, not bad but not outstanding. The price around NGN 1,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_131",
+    "user_id": "user_014",
+    "item_id": "item_032",
+    "rating": 3,
+    "review": "Ginger Pineapple Juice was okay, not bad but not outstanding. The price around NGN 1,600 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_132",
+    "user_id": "user_014",
+    "item_id": "item_037",
+    "rating": 3,
+    "review": "Power Bank 20000mAh was okay, not bad but not outstanding. The price around NGN 18,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_133",
+    "user_id": "user_014",
+    "item_id": "item_042",
+    "rating": 3,
+    "review": "Things Fall Apart Paperback was okay, not bad but not outstanding. The price around NGN 4,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_134",
+    "user_id": "user_014",
+    "item_id": "item_047",
+    "rating": 3,
+    "review": "Lagos Noir Movie Night was okay, not bad but not outstanding. The price around NGN 2,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_135",
+    "user_id": "user_014",
+    "item_id": "item_052",
+    "rating": 3,
+    "review": "Office Birthday Cake was okay, not bad but not outstanding. The price around NGN 18,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_136",
+    "user_id": "user_014",
+    "item_id": "item_057",
+    "rating": 3,
+    "review": "Plantain Chips Multipack was okay, not bad but not outstanding. The price around NGN 3,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_137",
+    "user_id": "user_014",
+    "item_id": "item_002",
+    "rating": 3,
+    "review": "Jollof Rice and Grilled Chicken was okay, not bad but not outstanding. The price around NGN 3,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_138",
+    "user_id": "user_014",
+    "item_id": "item_007",
+    "rating": 3,
+    "review": "Fried Rice Party Pack was okay, not bad but not outstanding. The price around NGN 14,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_139",
+    "user_id": "user_014",
+    "item_id": "item_012",
+    "rating": 3,
+    "review": "Egusi Soup and Pounded Yam was okay, not bad but not outstanding. The price around NGN 4,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_140",
+    "user_id": "user_014",
+    "item_id": "item_017",
+    "rating": 3,
+    "review": "Grilled Chicken and Plantain was okay, not bad but not outstanding. The price around NGN 5,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_141",
+    "user_id": "user_017",
+    "item_id": "item_039",
+    "rating": 4,
+    "review": "Non-Stick Frying Pan was a good pick. I liked the kitchen feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_142",
+    "user_id": "user_017",
+    "item_id": "item_044",
+    "rating": 4,
+    "review": "Lagos Food Memoir was a good pick. I liked the food feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_143",
+    "user_id": "user_017",
+    "item_id": "item_049",
+    "rating": 4,
+    "review": "Documentary on Lagos Food Markets was a good pick. I liked the documentary feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_144",
+    "user_id": "user_017",
+    "item_id": "item_054",
+    "rating": 4,
+    "review": "Kilishi Snack Pack was a good pick. I liked the kilishi feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_145",
+    "user_id": "user_017",
+    "item_id": "item_059",
+    "rating": 4,
+    "review": "Low Sugar Greek Yoghurt was a good pick. I liked the healthy feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_146",
+    "user_id": "user_017",
+    "item_id": "item_004",
+    "rating": 4,
+    "review": "Suya Platter with Yaji was a good pick. I liked the suya feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_147",
+    "user_id": "user_017",
+    "item_id": "item_009",
+    "rating": 4,
+    "review": "Asun with Fried Plantain was a good pick. I liked the asun feel and delivery could still be faster, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_148",
+    "user_id": "user_017",
+    "item_id": "item_014",
+    "rating": 5,
+    "review": "Akara and Custard Combo really matched my taste. The akara angle worked, portion was medium, and the price felt fair for the experience."
+  },
+  {
+    "review_id": "review_149",
+    "user_id": "user_017",
+    "item_id": "item_019",
+    "rating": 3,
+    "review": "Seafood Okra Soup was okay, not bad but not outstanding. The price around NGN 6,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_150",
+    "user_id": "user_017",
+    "item_id": "item_024",
+    "rating": 4,
+    "review": "Ewa Agoyin and Agege Bread was a good pick. I liked the ewa agoyin feel and delivery was smooth, though there is still small room to improve."
+  },
+  {
+    "review_id": "review_151",
+    "user_id": "user_018",
+    "item_id": "item_046",
+    "rating": 3,
+    "review": "Nigerian Startup Playbook was okay, not bad but not outstanding. The price around NGN 7,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_152",
+    "user_id": "user_018",
+    "item_id": "item_051",
+    "rating": 3,
+    "review": "Northern Nigeria Travel Documentary was okay, not bad but not outstanding. The price around NGN 2,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_153",
+    "user_id": "user_018",
+    "item_id": "item_056",
+    "rating": 3,
+    "review": "Coconut Rice and Turkey was okay, not bad but not outstanding. The price around NGN 4,800 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_154",
+    "user_id": "user_018",
+    "item_id": "item_001",
+    "rating": 3,
+    "review": "Spicy Chicken Shawarma was okay, not bad but not outstanding. The price around NGN 2,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_155",
+    "user_id": "user_018",
+    "item_id": "item_006",
+    "rating": 3,
+    "review": "Bole and Fish Combo was okay, not bad but not outstanding. The price around NGN 3,500 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_156",
+    "user_id": "user_018",
+    "item_id": "item_011",
+    "rating": 3,
+    "review": "Grilled Chicken Salad Bowl was okay, not bad but not outstanding. The price around NGN 4,200 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_157",
+    "user_id": "user_018",
+    "item_id": "item_016",
+    "rating": 3,
+    "review": "Puff-Puff Sharing Bowl was okay, not bad but not outstanding. The price around NGN 2,000 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_158",
+    "user_id": "user_018",
+    "item_id": "item_021",
+    "rating": 3,
+    "review": "Office Lunch Rice Bowl was okay, not bad but not outstanding. The price around NGN 3,600 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_159",
+    "user_id": "user_018",
+    "item_id": "item_026",
+    "rating": 3,
+    "review": "Zobo Ginger Bottle was okay, not bad but not outstanding. The price around NGN 900 needs to match the portion and freshness better."
+  },
+  {
+    "review_id": "review_160",
+    "user_id": "user_018",
+    "item_id": "item_031",
+    "rating": 3,
+    "review": "Fresh Orange Juice was okay, not bad but not outstanding. The price around NGN 1,800 needs to match the portion and freshness better."
+  }
+]

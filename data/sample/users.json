@@ -1,0 +1,128 @@
+[
+  {
+    "user_id": "user_001",
+    "name": "Tola",
+    "description": "Price-sensitive Lagos university student who likes spicy affordable meals, filling portions, and fast delivery after lectures.",
+    "rating_style": "balanced",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_002",
+    "name": "Chinedu",
+    "description": "Busy Lagos Island professional who values clean packaging, premium taste, quick office lunch, and reliable delivery.",
+    "rating_style": "strict",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_003",
+    "name": "Aisha",
+    "description": "Family-oriented Abuja parent who prefers generous portions, mild spice, hygiene, and meals that can be shared at home.",
+    "rating_style": "generous",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_004",
+    "name": "Kunle",
+    "description": "Mainland tech worker who likes shawarma, suya, cold drinks, late-night delivery, peppery food, and value for money.",
+    "rating_style": "generous",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_005",
+    "name": "Efe",
+    "description": "Port Harcourt spice lover who enjoys pepper soup, bole, seafood, asun, lively local flavour, and honest portions.",
+    "rating_style": "balanced",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_006",
+    "name": "Mariam",
+    "description": "Budget-conscious NYSC member who wants affordable groceries, durable products, simple meals, and dependable delivery.",
+    "rating_style": "strict",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_007",
+    "name": "Seyi",
+    "description": "Book and movie lover who enjoys Nigerian stories, zobo or Chapman with snacks, and calm weekend plans.",
+    "rating_style": "balanced",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_008",
+    "name": "Ngozi",
+    "description": "Busy Lekki parent who likes family meals, clean restaurants, kids-friendly options, and predictable delivery time.",
+    "rating_style": "balanced",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_009",
+    "name": "Ibrahim",
+    "description": "Health-conscious customer who prefers grilled meals, low sugar drinks, good protein, and moderate prices.",
+    "rating_style": "strict",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_010",
+    "name": "Bimbo",
+    "description": "Social organiser who buys small chops, drinks, cakes, and group-friendly meals for birthdays and office hangouts.",
+    "rating_style": "generous",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_011",
+    "name": "Damilola",
+    "description": "Very strict reviewer in Yaba who complains about late delivery, cold food, careless packaging, and inflated prices.",
+    "rating_style": "strict",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_012",
+    "name": "Adaeze",
+    "description": "Generous reviewer who enjoys trying new Nigerian restaurants, values ambience, friendly service, and local flavour.",
+    "rating_style": "generous",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_013",
+    "name": "Musa",
+    "description": "Delivery-sensitive Abuja consultant who needs quick lunch, clear timing, neat packaging, and no unnecessary delay.",
+    "rating_style": "strict",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_014",
+    "name": "Fisayo",
+    "description": "Ambience-focused Lagos diner who likes stylish restaurants, smooth service, Chapman, desserts, and date-night comfort.",
+    "rating_style": "balanced",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_015",
+    "name": "Temi",
+    "description": "Cold-start Lagos visitor who wants affordable local food, not too much pepper, and quick delivery near Yaba.",
+    "rating_style": "balanced",
+    "cold_start": true
+  },
+  {
+    "user_id": "user_016",
+    "name": "Nneka",
+    "description": "Cold-start remote worker who wants useful everyday products, books, light meals, and low-stress recommendations.",
+    "rating_style": "balanced",
+    "cold_start": true
+  },
+  {
+    "user_id": "user_017",
+    "name": "Kemi",
+    "description": "University hostel resident who likes meat pie, puff-puff, cheap drinks, fast delivery, and snacks for friends.",
+    "rating_style": "generous",
+    "cold_start": false
+  },
+  {
+    "user_id": "user_018",
+    "name": "Obinna",
+    "description": "Everyday product buyer who values durable electronics, fair price, clear specs, and products that survive Nigerian power realities.",
+    "rating_style": "strict",
+    "cold_start": false
+  }
+]

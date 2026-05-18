@@ -1,0 +1,1409 @@
+[
+  {
+    "item_id": "item_001",
+    "name": "Spicy Chicken Shawarma",
+    "category": "Food",
+    "price": 2500,
+    "metadata": {
+      "spice_level": 4,
+      "spicy": true,
+      "delivery_time_minutes": 35,
+      "portion_size": "medium",
+      "location": "Lagos Mainland",
+      "category": "Food",
+      "tags": [
+        "shawarma",
+        "spicy",
+        "student",
+        "quick"
+      ],
+      "popularity_score": 88,
+      "popularity": 88,
+      "average_rating": 4.2,
+      "quality_score": 4.2
+    }
+  },
+  {
+    "item_id": "item_002",
+    "name": "Jollof Rice and Grilled Chicken",
+    "category": "Food",
+    "price": 3200,
+    "metadata": {
+      "spice_level": 4,
+      "spicy": true,
+      "delivery_time_minutes": 45,
+      "portion_size": "large",
+      "location": "Lagos",
+      "category": "Food",
+      "tags": [
+        "jollof",
+        "chicken",
+        "filling",
+        "party"
+      ],
+      "popularity_score": 93,
+      "popularity": 93,
+      "average_rating": 4.4,
+      "quality_score": 4.4
+    }
+  },
+  {
+    "item_id": "item_003",
+    "name": "Amala with Ewedu and Gbegiri",
+    "category": "Food",
+    "price": 2200,
+    "metadata": {
+      "spice_level": 2,
+      "spicy": false,
+      "delivery_time_minutes": 40,
+      "portion_size": "large",
+      "location": "Yaba",
+      "category": "Food",
+      "tags": [
+        "amala",
+        "swallow",
+        "local",
+        "budget"
+      ],
+      "popularity_score": 82,
+      "popularity": 82,
+      "average_rating": 4.1,
+      "quality_score": 4.1
+    }
+  },
+  {
+    "item_id": "item_004",
+    "name": "Suya Platter with Yaji",
+    "category": "Food",
+    "price": 3800,
+    "metadata": {
+      "spice_level": 5,
+      "spicy": true,
+      "delivery_time_minutes": 30,
+      "portion_size": "medium",
+      "location": "Ikeja",
+      "category": "Food",
+      "tags": [
+        "suya",
+        "pepper",
+        "night",
+        "protein"
+      ],
+      "popularity_score": 95,
+      "popularity": 95,
+      "average_rating": 4.5,
+      "quality_score": 4.5
+    }
+  },
+  {
+    "item_id": "item_005",
+    "name": "Catfish Pepper Soup",
+    "category": "Food",
+    "price": 4500,
+    "metadata": {
+      "spice_level": 5,
+      "spicy": true,
+      "delivery_time_minutes": 55,
+      "portion_size": "medium",
+      "location": "Port Harcourt",
+      "category": "Food",
+      "tags": [
+        "pepper soup",
+        "catfish",
+        "spicy"
+      ],
+      "popularity_score": 79,
+      "popularity": 79,
+      "average_rating": 4.3,
+      "quality_score": 4.3
+    }
+  },
+  {
+    "item_id": "item_006",
+    "name": "Bole and Fish Combo",
+    "category": "Food",
+    "price": 3500,
+    "metadata": {
+      "spice_level": 4,
+      "spicy": true,
+      "delivery_time_minutes": 50,
+      "portion_size": "large",
+      "location": "Port Harcourt",
+      "category": "Food",
+      "tags": [
+        "bole",
+        "fish",
+        "filling",
+        "local"
+      ],
+      "popularity_score": 86,
+      "popularity": 86,
+      "average_rating": 4.4,
+      "quality_score": 4.4
+    }
+  },
+  {
+    "item_id": "item_007",
+    "name": "Fried Rice Party Pack",
+    "category": "Food",
+    "price": 14500,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 70,
+      "portion_size": "family",
+      "location": "Lekki",
+      "category": "Food",
+      "tags": [
+        "fried rice",
+        "party",
+        "family",
+        "sharing"
+      ],
+      "popularity_score": 73,
+      "popularity": 73,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_008",
+    "name": "Small Chops Box",
+    "category": "Food",
+    "price": 6000,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 45,
+      "portion_size": "sharing",
+      "location": "Lagos",
+      "category": "Food",
+      "tags": [
+        "small chops",
+        "party",
+        "snacks",
+        "sharing"
+      ],
+      "popularity_score": 89,
+      "popularity": 89,
+      "average_rating": 4.2,
+      "quality_score": 4.2
+    }
+  },
+  {
+    "item_id": "item_009",
+    "name": "Asun with Fried Plantain",
+    "category": "Food",
+    "price": 5000,
+    "metadata": {
+      "spice_level": 5,
+      "spicy": true,
+      "delivery_time_minutes": 50,
+      "portion_size": "medium",
+      "location": "Surulere",
+      "category": "Food",
+      "tags": [
+        "asun",
+        "pepper",
+        "plantain"
+      ],
+      "popularity_score": 80,
+      "popularity": 80,
+      "average_rating": 4.1,
+      "quality_score": 4.1
+    }
+  },
+  {
+    "item_id": "item_010",
+    "name": "Moi Moi and Pap Breakfast",
+    "category": "Food",
+    "price": 1800,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 25,
+      "portion_size": "medium",
+      "location": "Lagos Mainland",
+      "category": "Food",
+      "tags": [
+        "breakfast",
+        "moi moi",
+        "budget",
+        "quick"
+      ],
+      "popularity_score": 70,
+      "popularity": 70,
+      "average_rating": 3.9,
+      "quality_score": 3.9
+    }
+  },
+  {
+    "item_id": "item_011",
+    "name": "Grilled Chicken Salad Bowl",
+    "category": "Food",
+    "price": 4200,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 35,
+      "portion_size": "medium",
+      "location": "Victoria Island",
+      "category": "Food",
+      "tags": [
+        "healthy",
+        "protein",
+        "salad",
+        "office"
+      ],
+      "popularity_score": 65,
+      "popularity": 65,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_012",
+    "name": "Egusi Soup and Pounded Yam",
+    "category": "Food",
+    "price": 4200,
+    "metadata": {
+      "spice_level": 3,
+      "spicy": false,
+      "delivery_time_minutes": 60,
+      "portion_size": "large",
+      "location": "Abuja",
+      "category": "Food",
+      "tags": [
+        "egusi",
+        "swallow",
+        "family",
+        "filling"
+      ],
+      "popularity_score": 84,
+      "popularity": 84,
+      "average_rating": 4.3,
+      "quality_score": 4.3
+    }
+  },
+  {
+    "item_id": "item_013",
+    "name": "Ofada Rice and Ayamase",
+    "category": "Food",
+    "price": 4800,
+    "metadata": {
+      "spice_level": 5,
+      "spicy": true,
+      "delivery_time_minutes": 55,
+      "portion_size": "large",
+      "location": "Lagos Island",
+      "category": "Food",
+      "tags": [
+        "ofada",
+        "ayamase",
+        "pepper",
+        "local"
+      ],
+      "popularity_score": 87,
+      "popularity": 87,
+      "average_rating": 4.4,
+      "quality_score": 4.4
+    }
+  },
+  {
+    "item_id": "item_014",
+    "name": "Akara and Custard Combo",
+    "category": "Food",
+    "price": 1700,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 25,
+      "portion_size": "medium",
+      "location": "Lagos Mainland",
+      "category": "Food",
+      "tags": [
+        "akara",
+        "breakfast",
+        "budget",
+        "quick"
+      ],
+      "popularity_score": 72,
+      "popularity": 72,
+      "average_rating": 3.9,
+      "quality_score": 3.9
+    }
+  },
+  {
+    "item_id": "item_015",
+    "name": "Meat Pie Duo",
+    "category": "Food",
+    "price": 1600,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 20,
+      "portion_size": "small",
+      "location": "Yaba",
+      "category": "Food",
+      "tags": [
+        "meat pie",
+        "snack",
+        "student",
+        "quick"
+      ],
+      "popularity_score": 76,
+      "popularity": 76,
+      "average_rating": 3.8,
+      "quality_score": 3.8
+    }
+  },
+  {
+    "item_id": "item_016",
+    "name": "Puff-Puff Sharing Bowl",
+    "category": "Food",
+    "price": 2000,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 20,
+      "portion_size": "sharing",
+      "location": "Lagos Mainland",
+      "category": "Food",
+      "tags": [
+        "puff-puff",
+        "snack",
+        "sharing",
+        "budget"
+      ],
+      "popularity_score": 81,
+      "popularity": 81,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_017",
+    "name": "Grilled Chicken and Plantain",
+    "category": "Food",
+    "price": 5200,
+    "metadata": {
+      "spice_level": 3,
+      "spicy": false,
+      "delivery_time_minutes": 40,
+      "portion_size": "large",
+      "location": "Lekki",
+      "category": "Food",
+      "tags": [
+        "grilled chicken",
+        "plantain",
+        "protein"
+      ],
+      "popularity_score": 83,
+      "popularity": 83,
+      "average_rating": 4.2,
+      "quality_score": 4.2
+    }
+  },
+  {
+    "item_id": "item_018",
+    "name": "Beans and Plantain Bowl",
+    "category": "Food",
+    "price": 2400,
+    "metadata": {
+      "spice_level": 2,
+      "spicy": false,
+      "delivery_time_minutes": 35,
+      "portion_size": "large",
+      "location": "Yaba",
+      "category": "Food",
+      "tags": [
+        "beans",
+        "plantain",
+        "budget",
+        "filling"
+      ],
+      "popularity_score": 75,
+      "popularity": 75,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_019",
+    "name": "Seafood Okra Soup",
+    "category": "Food",
+    "price": 6200,
+    "metadata": {
+      "spice_level": 4,
+      "spicy": true,
+      "delivery_time_minutes": 65,
+      "portion_size": "large",
+      "location": "Port Harcourt",
+      "category": "Food",
+      "tags": [
+        "seafood",
+        "okra",
+        "swallow",
+        "premium"
+      ],
+      "popularity_score": 77,
+      "popularity": 77,
+      "average_rating": 4.3,
+      "quality_score": 4.3
+    }
+  },
+  {
+    "item_id": "item_020",
+    "name": "Premium Sushi Box",
+    "category": "Food",
+    "price": 18500,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 80,
+      "portion_size": "small",
+      "location": "Victoria Island",
+      "category": "Food",
+      "tags": [
+        "sushi",
+        "premium",
+        "date"
+      ],
+      "popularity_score": 50,
+      "popularity": 50,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_021",
+    "name": "Office Lunch Rice Bowl",
+    "category": "Food",
+    "price": 3600,
+    "metadata": {
+      "spice_level": 2,
+      "spicy": false,
+      "delivery_time_minutes": 28,
+      "portion_size": "medium",
+      "location": "Victoria Island",
+      "category": "Food",
+      "tags": [
+        "office lunch",
+        "quick",
+        "rice",
+        "clean"
+      ],
+      "popularity_score": 78,
+      "popularity": 78,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_022",
+    "name": "Family Pepperless Chicken Stew",
+    "category": "Food",
+    "price": 9000,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 50,
+      "portion_size": "family",
+      "location": "Abuja",
+      "category": "Food",
+      "tags": [
+        "family",
+        "mild",
+        "chicken",
+        "sharing"
+      ],
+      "popularity_score": 74,
+      "popularity": 74,
+      "average_rating": 4.1,
+      "quality_score": 4.1
+    }
+  },
+  {
+    "item_id": "item_023",
+    "name": "Smoky Party Jollof Tray",
+    "category": "Food",
+    "price": 16500,
+    "metadata": {
+      "spice_level": 3,
+      "spicy": false,
+      "delivery_time_minutes": 75,
+      "portion_size": "family",
+      "location": "Lagos",
+      "category": "Food",
+      "tags": [
+        "jollof",
+        "party",
+        "sharing"
+      ],
+      "popularity_score": 90,
+      "popularity": 90,
+      "average_rating": 4.5,
+      "quality_score": 4.5
+    }
+  },
+  {
+    "item_id": "item_024",
+    "name": "Ewa Agoyin and Agege Bread",
+    "category": "Food",
+    "price": 2300,
+    "metadata": {
+      "spice_level": 3,
+      "spicy": false,
+      "delivery_time_minutes": 38,
+      "portion_size": "large",
+      "location": "Lagos Mainland",
+      "category": "Food",
+      "tags": [
+        "ewa agoyin",
+        "bread",
+        "local",
+        "budget"
+      ],
+      "popularity_score": 79,
+      "popularity": 79,
+      "average_rating": 4.1,
+      "quality_score": 4.1
+    }
+  },
+  {
+    "item_id": "item_025",
+    "name": "Chicken Pepper Soup Bowl",
+    "category": "Food",
+    "price": 3900,
+    "metadata": {
+      "spice_level": 5,
+      "spicy": true,
+      "delivery_time_minutes": 45,
+      "portion_size": "medium",
+      "location": "Abuja",
+      "category": "Food",
+      "tags": [
+        "pepper soup",
+        "chicken",
+        "spicy"
+      ],
+      "popularity_score": 76,
+      "popularity": 76,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_026",
+    "name": "Zobo Ginger Bottle",
+    "category": "Drink",
+    "price": 900,
+    "metadata": {
+      "spice_level": 3,
+      "spicy": false,
+      "delivery_time_minutes": 20,
+      "portion_size": "single",
+      "location": "Lagos",
+      "category": "Drink",
+      "tags": [
+        "zobo",
+        "ginger",
+        "budget",
+        "drink"
+      ],
+      "popularity_score": 78,
+      "popularity": 78,
+      "average_rating": 4.1,
+      "quality_score": 4.1
+    }
+  },
+  {
+    "item_id": "item_027",
+    "name": "Classic Chapman",
+    "category": "Drink",
+    "price": 1500,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 25,
+      "portion_size": "single",
+      "location": "Lagos",
+      "category": "Drink",
+      "tags": [
+        "chapman",
+        "sweet",
+        "drink",
+        "hangout"
+      ],
+      "popularity_score": 81,
+      "popularity": 81,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_028",
+    "name": "Tiger Nut Drink",
+    "category": "Drink",
+    "price": 1200,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 20,
+      "portion_size": "single",
+      "location": "Abuja",
+      "category": "Drink",
+      "tags": [
+        "tigernut",
+        "low sugar",
+        "drink"
+      ],
+      "popularity_score": 66,
+      "popularity": 66,
+      "average_rating": 3.8,
+      "quality_score": 3.8
+    }
+  },
+  {
+    "item_id": "item_029",
+    "name": "Cold Malt Pack",
+    "category": "Drink",
+    "price": 2500,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 30,
+      "portion_size": "sharing",
+      "location": "Lagos",
+      "category": "Drink",
+      "tags": [
+        "malt",
+        "sharing",
+        "cold drink"
+      ],
+      "popularity_score": 75,
+      "popularity": 75,
+      "average_rating": 3.9,
+      "quality_score": 3.9
+    }
+  },
+  {
+    "item_id": "item_030",
+    "name": "Kunu Bottle",
+    "category": "Drink",
+    "price": 800,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 18,
+      "portion_size": "single",
+      "location": "Abuja",
+      "category": "Drink",
+      "tags": [
+        "kunu",
+        "budget",
+        "local drink"
+      ],
+      "popularity_score": 61,
+      "popularity": 61,
+      "average_rating": 3.7,
+      "quality_score": 3.7
+    }
+  },
+  {
+    "item_id": "item_031",
+    "name": "Fresh Orange Juice",
+    "category": "Drink",
+    "price": 1800,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 22,
+      "portion_size": "single",
+      "location": "Victoria Island",
+      "category": "Drink",
+      "tags": [
+        "juice",
+        "healthy",
+        "low sugar"
+      ],
+      "popularity_score": 68,
+      "popularity": 68,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_032",
+    "name": "Ginger Pineapple Juice",
+    "category": "Drink",
+    "price": 1600,
+    "metadata": {
+      "spice_level": 2,
+      "spicy": false,
+      "delivery_time_minutes": 25,
+      "portion_size": "single",
+      "location": "Lagos",
+      "category": "Drink",
+      "tags": [
+        "ginger",
+        "pineapple",
+        "drink"
+      ],
+      "popularity_score": 72,
+      "popularity": 72,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_033",
+    "name": "Reusable Food Flask",
+    "category": "Product",
+    "price": 7500,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 48,
+      "portion_size": "single",
+      "location": "Lagos",
+      "category": "Product",
+      "tags": [
+        "flask",
+        "durable",
+        "school",
+        "office"
+      ],
+      "popularity_score": 72,
+      "popularity": 72,
+      "average_rating": 4.2,
+      "quality_score": 4.2
+    }
+  },
+  {
+    "item_id": "item_034",
+    "name": "Budget Android Earbuds",
+    "category": "Product",
+    "price": 9500,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 36,
+      "portion_size": "single",
+      "location": "Lagos",
+      "category": "Product",
+      "tags": [
+        "earbuds",
+        "budget",
+        "electronics"
+      ],
+      "popularity_score": 68,
+      "popularity": 68,
+      "average_rating": 3.6,
+      "quality_score": 3.6
+    }
+  },
+  {
+    "item_id": "item_035",
+    "name": "Rechargeable Standing Fan",
+    "category": "Product",
+    "price": 32000,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 72,
+      "portion_size": "single",
+      "location": "Lagos",
+      "category": "Product",
+      "tags": [
+        "fan",
+        "rechargeable",
+        "durable",
+        "power"
+      ],
+      "popularity_score": 91,
+      "popularity": 91,
+      "average_rating": 4.4,
+      "quality_score": 4.4
+    }
+  },
+  {
+    "item_id": "item_036",
+    "name": "Student Grocery Starter Pack",
+    "category": "Product",
+    "price": 8500,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 40,
+      "portion_size": "family",
+      "location": "Yaba",
+      "category": "Product",
+      "tags": [
+        "grocery",
+        "student",
+        "budget",
+        "staples"
+      ],
+      "popularity_score": 87,
+      "popularity": 87,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_037",
+    "name": "Power Bank 20000mAh",
+    "category": "Product",
+    "price": 18500,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 35,
+      "portion_size": "single",
+      "location": "Lagos",
+      "category": "Product",
+      "tags": [
+        "power bank",
+        "durable",
+        "electronics",
+        "power"
+      ],
+      "popularity_score": 89,
+      "popularity": 89,
+      "average_rating": 4.3,
+      "quality_score": 4.3
+    }
+  },
+  {
+    "item_id": "item_038",
+    "name": "Mosquito Repellent Kit",
+    "category": "Product",
+    "price": 4200,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 30,
+      "portion_size": "family",
+      "location": "Abuja",
+      "category": "Product",
+      "tags": [
+        "home",
+        "health",
+        "family"
+      ],
+      "popularity_score": 70,
+      "popularity": 70,
+      "average_rating": 3.9,
+      "quality_score": 3.9
+    }
+  },
+  {
+    "item_id": "item_039",
+    "name": "Non-Stick Frying Pan",
+    "category": "Product",
+    "price": 12500,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 45,
+      "portion_size": "single",
+      "location": "Lagos",
+      "category": "Product",
+      "tags": [
+        "kitchen",
+        "durable",
+        "home"
+      ],
+      "popularity_score": 73,
+      "popularity": 73,
+      "average_rating": 4.1,
+      "quality_score": 4.1
+    }
+  },
+  {
+    "item_id": "item_040",
+    "name": "Budget Data Router",
+    "category": "Product",
+    "price": 28000,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 55,
+      "portion_size": "single",
+      "location": "Lagos",
+      "category": "Product",
+      "tags": [
+        "router",
+        "remote work",
+        "electronics"
+      ],
+      "popularity_score": 82,
+      "popularity": 82,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_041",
+    "name": "Nigerian Campus Love Stories",
+    "category": "Book",
+    "price": 3000,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 24,
+      "portion_size": "single",
+      "location": "Online",
+      "category": "Book",
+      "tags": [
+        "campus",
+        "romance",
+        "nigerian story"
+      ],
+      "popularity_score": 74,
+      "popularity": 74,
+      "average_rating": 4.2,
+      "quality_score": 4.2
+    }
+  },
+  {
+    "item_id": "item_042",
+    "name": "Things Fall Apart Paperback",
+    "category": "Book",
+    "price": 4500,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 36,
+      "portion_size": "single",
+      "location": "Online",
+      "category": "Book",
+      "tags": [
+        "classic",
+        "nigerian story",
+        "literature"
+      ],
+      "popularity_score": 92,
+      "popularity": 92,
+      "average_rating": 4.8,
+      "quality_score": 4.8
+    }
+  },
+  {
+    "item_id": "item_043",
+    "name": "Personal Finance for Young Nigerians",
+    "category": "Book",
+    "price": 5500,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 36,
+      "portion_size": "single",
+      "location": "Online",
+      "category": "Book",
+      "tags": [
+        "finance",
+        "young nigerians",
+        "practical"
+      ],
+      "popularity_score": 69,
+      "popularity": 69,
+      "average_rating": 4.1,
+      "quality_score": 4.1
+    }
+  },
+  {
+    "item_id": "item_044",
+    "name": "Lagos Food Memoir",
+    "category": "Book",
+    "price": 4200,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 30,
+      "portion_size": "single",
+      "location": "Online",
+      "category": "Book",
+      "tags": [
+        "food",
+        "lagos",
+        "memoir"
+      ],
+      "popularity_score": 62,
+      "popularity": 62,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_045",
+    "name": "African Sci-Fi Short Stories",
+    "category": "Book",
+    "price": 5000,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 40,
+      "portion_size": "single",
+      "location": "Online",
+      "category": "Book",
+      "tags": [
+        "sci-fi",
+        "african",
+        "stories"
+      ],
+      "popularity_score": 58,
+      "popularity": 58,
+      "average_rating": 3.9,
+      "quality_score": 3.9
+    }
+  },
+  {
+    "item_id": "item_046",
+    "name": "Nigerian Startup Playbook",
+    "category": "Book",
+    "price": 7000,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 36,
+      "portion_size": "single",
+      "location": "Online",
+      "category": "Book",
+      "tags": [
+        "startup",
+        "business",
+        "nigeria"
+      ],
+      "popularity_score": 64,
+      "popularity": 64,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_047",
+    "name": "Lagos Noir Movie Night",
+    "category": "Movie",
+    "price": 2500,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 0,
+      "portion_size": "single",
+      "location": "Streaming",
+      "category": "Movie",
+      "tags": [
+        "thriller",
+        "lagos",
+        "nollywood"
+      ],
+      "popularity_score": 76,
+      "popularity": 76,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_048",
+    "name": "Nollywood Family Comedy",
+    "category": "Movie",
+    "price": 2200,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 0,
+      "portion_size": "family",
+      "location": "Streaming",
+      "category": "Movie",
+      "tags": [
+        "comedy",
+        "family",
+        "nollywood"
+      ],
+      "popularity_score": 83,
+      "popularity": 83,
+      "average_rating": 3.8,
+      "quality_score": 3.8
+    }
+  },
+  {
+    "item_id": "item_049",
+    "name": "Documentary on Lagos Food Markets",
+    "category": "Movie",
+    "price": 1800,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 0,
+      "portion_size": "single",
+      "location": "Streaming",
+      "category": "Movie",
+      "tags": [
+        "documentary",
+        "food",
+        "lagos"
+      ],
+      "popularity_score": 64,
+      "popularity": 64,
+      "average_rating": 4.3,
+      "quality_score": 4.3
+    }
+  },
+  {
+    "item_id": "item_050",
+    "name": "Afrobeats Concert Stream",
+    "category": "Movie",
+    "price": 3000,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 0,
+      "portion_size": "sharing",
+      "location": "Streaming",
+      "category": "Movie",
+      "tags": [
+        "music",
+        "concert",
+        "hangout"
+      ],
+      "popularity_score": 85,
+      "popularity": 85,
+      "average_rating": 4.1,
+      "quality_score": 4.1
+    }
+  },
+  {
+    "item_id": "item_051",
+    "name": "Northern Nigeria Travel Documentary",
+    "category": "Movie",
+    "price": 2000,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 0,
+      "portion_size": "single",
+      "location": "Streaming",
+      "category": "Movie",
+      "tags": [
+        "documentary",
+        "travel",
+        "nigeria"
+      ],
+      "popularity_score": 59,
+      "popularity": 59,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_052",
+    "name": "Office Birthday Cake",
+    "category": "Food",
+    "price": 18000,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 65,
+      "portion_size": "sharing",
+      "location": "Lagos",
+      "category": "Food",
+      "tags": [
+        "cake",
+        "birthday",
+        "office",
+        "sharing"
+      ],
+      "popularity_score": 77,
+      "popularity": 77,
+      "average_rating": 4.2,
+      "quality_score": 4.2
+    }
+  },
+  {
+    "item_id": "item_053",
+    "name": "Date Night Dessert Box",
+    "category": "Food",
+    "price": 9500,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 45,
+      "portion_size": "sharing",
+      "location": "Lekki",
+      "category": "Food",
+      "tags": [
+        "dessert",
+        "date",
+        "premium"
+      ],
+      "popularity_score": 69,
+      "popularity": 69,
+      "average_rating": 4.1,
+      "quality_score": 4.1
+    }
+  },
+  {
+    "item_id": "item_054",
+    "name": "Kilishi Snack Pack",
+    "category": "Food",
+    "price": 3200,
+    "metadata": {
+      "spice_level": 4,
+      "spicy": true,
+      "delivery_time_minutes": 35,
+      "portion_size": "small",
+      "location": "Abuja",
+      "category": "Food",
+      "tags": [
+        "kilishi",
+        "spicy",
+        "snack"
+      ],
+      "popularity_score": 71,
+      "popularity": 71,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_055",
+    "name": "Yam Porridge Bowl",
+    "category": "Food",
+    "price": 2800,
+    "metadata": {
+      "spice_level": 2,
+      "spicy": false,
+      "delivery_time_minutes": 42,
+      "portion_size": "large",
+      "location": "Lagos Mainland",
+      "category": "Food",
+      "tags": [
+        "yam",
+        "porridge",
+        "filling",
+        "budget"
+      ],
+      "popularity_score": 67,
+      "popularity": 67,
+      "average_rating": 3.9,
+      "quality_score": 3.9
+    }
+  },
+  {
+    "item_id": "item_056",
+    "name": "Coconut Rice and Turkey",
+    "category": "Food",
+    "price": 4800,
+    "metadata": {
+      "spice_level": 2,
+      "spicy": false,
+      "delivery_time_minutes": 48,
+      "portion_size": "large",
+      "location": "Lekki",
+      "category": "Food",
+      "tags": [
+        "rice",
+        "turkey",
+        "family"
+      ],
+      "popularity_score": 74,
+      "popularity": 74,
+      "average_rating": 4.1,
+      "quality_score": 4.1
+    }
+  },
+  {
+    "item_id": "item_057",
+    "name": "Plantain Chips Multipack",
+    "category": "Product",
+    "price": 3500,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 28,
+      "portion_size": "sharing",
+      "location": "Lagos",
+      "category": "Product",
+      "tags": [
+        "plantain chips",
+        "snack",
+        "sharing"
+      ],
+      "popularity_score": 78,
+      "popularity": 78,
+      "average_rating": 3.9,
+      "quality_score": 3.9
+    }
+  },
+  {
+    "item_id": "item_058",
+    "name": "Office Snack Basket",
+    "category": "Product",
+    "price": 11000,
+    "metadata": {
+      "spice_level": 1,
+      "spicy": false,
+      "delivery_time_minutes": 40,
+      "portion_size": "sharing",
+      "location": "Lagos",
+      "category": "Product",
+      "tags": [
+        "snacks",
+        "office",
+        "sharing"
+      ],
+      "popularity_score": 80,
+      "popularity": 80,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_059",
+    "name": "Low Sugar Greek Yoghurt",
+    "category": "Drink",
+    "price": 2200,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 20,
+      "portion_size": "single",
+      "location": "Lagos",
+      "category": "Drink",
+      "tags": [
+        "healthy",
+        "low sugar",
+        "protein"
+      ],
+      "popularity_score": 63,
+      "popularity": 63,
+      "average_rating": 4.0,
+      "quality_score": 4.0
+    }
+  },
+  {
+    "item_id": "item_060",
+    "name": "Palm Wine Bottle",
+    "category": "Drink",
+    "price": 1800,
+    "metadata": {
+      "spice_level": 0,
+      "spicy": false,
+      "delivery_time_minutes": 30,
+      "portion_size": "single",
+      "location": "Lagos",
+      "category": "Drink",
+      "tags": [
+        "palm wine",
+        "local drink",
+        "hangout"
+      ],
+      "popularity_score": 60,
+      "popularity": 60,
+      "average_rating": 3.8,
+      "quality_score": 3.8
+    }
+  }
+]

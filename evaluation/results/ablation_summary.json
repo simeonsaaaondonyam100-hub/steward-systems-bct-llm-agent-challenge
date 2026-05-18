@@ -1,0 +1,20 @@
+{
+  "popularity_content_baseline": {
+    "hit_rate@5": 0.375,
+    "hit_rate@10": 0.4375,
+    "ndcg@5": 0.2127,
+    "ndcg@10": 0.235
+  },
+  "hybrid_without_nigerian_context": {
+    "hit_rate@5": 0.25,
+    "hit_rate@10": 0.5625,
+    "ndcg@5": 0.1684,
+    "ndcg@10": 0.259
+  },
+  "hybrid_with_nigerian_context": {
+    "hit_rate@5": 0.25,
+    "hit_rate@10": 0.5625,
+    "ndcg@5": 0.164,
+    "ndcg@10": 0.252
+  }
+}

@@ -1,0 +1,5 @@
+case_id,task,user_id,item_or_context,predicted_output,human_rating_1_to_5,behavioural_fidelity_notes,nigerian_context_notes
+1,Task A,user_001,Spicy Chicken Shawarma,"",,,
+2,Task A,user_004,Premium Sushi Box,"",,,
+3,Task B,user_007,Weekend movie and snack plan,"",,,
+4,Task B,user_010,Office birthday hangout,"",,,

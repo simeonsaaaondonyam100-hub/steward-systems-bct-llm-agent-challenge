@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    container_name: steward-bct-agent
+    ports:
+      - "8000:8000"
+    environment:
+      STEWARD_USE_LLM: "false"
+      STEWARD_DATA_DIR: /app/data/sample

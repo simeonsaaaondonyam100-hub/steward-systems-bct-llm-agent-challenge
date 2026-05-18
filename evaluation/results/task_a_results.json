@@ -1,0 +1,96 @@
+{
+  "num_examples": 160,
+  "rmse": 0.7029,
+  "mae": 0.5463,
+  "generated_review_average_words": 64.1,
+  "sample_predictions": [
+    {
+      "user_id": "user_001",
+      "item_name": "Spicy Chicken Shawarma",
+      "actual_rating": 5,
+      "predicted_rating": 5.0,
+      "absolute_error": 0.0
+    },
+    {
+      "user_id": "user_001",
+      "item_name": "Bole and Fish Combo",
+      "actual_rating": 5,
+      "predicted_rating": 5.0,
+      "absolute_error": 0.0
+    },
+    {
+      "user_id": "user_001",
+      "item_name": "Grilled Chicken Salad Bowl",
+      "actual_rating": 4,
+      "predicted_rating": 5.0,
+      "absolute_error": 1.0
+    },
+    {
+      "user_id": "user_001",
+      "item_name": "Puff-Puff Sharing Bowl",
+      "actual_rating": 5,
+      "predicted_rating": 5.0,
+      "absolute_error": 0.0
+    },
+    {
+      "user_id": "user_001",
+      "item_name": "Office Lunch Rice Bowl",
+      "actual_rating": 4,
+      "predicted_rating": 5.0,
+      "absolute_error": 1.0
+    },
+    {
+      "user_id": "user_001",
+      "item_name": "Zobo Ginger Bottle",
+      "actual_rating": 5,
+      "predicted_rating": 5.0,
+      "absolute_error": 0.0
+    },
+    {
+      "user_id": "user_001",
+      "item_name": "Fresh Orange Juice",
+      "actual_rating": 4,
+      "predicted_rating": 5.0,
+      "absolute_error": 1.0
+    },
+    {
+      "user_id": "user_001",
+      "item_name": "Student Grocery Starter Pack",
+      "actual_rating": 4,
+      "predicted_rating": 4.6,
+      "absolute_error": 0.6
+    }
+  ],
+  "qualitative_samples": [
+    {
+      "user_id": "user_001",
+      "item_name": "Spicy Chicken Shawarma",
+      "generated_review": "I really enjoyed the Spicy Chicken Shawarma. On the details, delivery was around 35 minutes, portion size was medium, spice level felt like 4/5. What stood out is that target item overlaps with the user's stated preferences. The pepper was present in a good way, not just noise. I would order it again without thinking too much. No wahala on this one.",
+      "profile_summary": "generous reviewer with interest in Food, Drink; strongest preference cues: portion, smooth, sharing, spicy, affordable; price sensitivity: high; spice preference: high; portion preference: sharing; tone: casual Nigerian English with mild Pidgin"
+    },
+    {
+      "user_id": "user_001",
+      "item_name": "Bole and Fish Combo",
+      "generated_review": "I really enjoyed the Bole and Fish Combo. On the details, delivery was around 50 minutes, portion size was large, spice level felt like 4/5. What stood out is that target item overlaps with the user's stated preferences. The pepper was present in a good way, not just noise. I would order it again without thinking too much. No wahala on this one.",
+      "profile_summary": "generous reviewer with interest in Food, Drink; strongest preference cues: portion, spicy, smooth, sharing, affordable; price sensitivity: high; spice preference: high; portion preference: sharing; tone: casual Nigerian English with mild Pidgin"
+    },
+    {
+      "user_id": "user_001",
+      "item_name": "Grilled Chicken Salad Bowl",
+      "generated_review": "I really enjoyed the Grilled Chicken Salad Bowl. On the details, delivery was around 35 minutes, portion size was medium, spice level felt like 1/5. The best part is that target item overlaps with the user's stated preferences, although item may be too mild for the user's stated taste. For Victoria Island, it felt like good value. I would order it again without thinking too much. No wahala on this one.",
+      "profile_summary": "generous reviewer with interest in Food, Drink; strongest preference cues: portion, spicy, sharing, affordable, filling; price sensitivity: high; spice preference: high; portion preference: sharing; tone: casual Nigerian English with mild Pidgin"
+    },
+    {
+      "user_id": "user_001",
+      "item_name": "Puff-Puff Sharing Bowl",
+      "generated_review": "I really enjoyed the Puff-Puff Sharing Bowl. On the details, delivery was around 20 minutes, portion size was sharing, spice level felt like 1/5. The best part is that target item overlaps with the user's stated preferences, although item may be too mild for the user's stated taste. For Lagos Mainland, it felt like good value. I would order it again without thinking too much. No wahala on this one.",
+      "profile_summary": "generous reviewer with interest in Food, Drink; strongest preference cues: portion, spicy, smooth, affordable, filling; price sensitivity: high; spice preference: high; portion preference: large; tone: casual Nigerian English with mild Pidgin"
+    },
+    {
+      "user_id": "user_001",
+      "item_name": "Office Lunch Rice Bowl",
+      "generated_review": "I really enjoyed the Office Lunch Rice Bowl. On the details, delivery was around 28 minutes, portion size was medium, spice level felt like 2/5. What stood out is that target item overlaps with the user's stated preferences. For Victoria Island, it felt like good value. I would order it again without thinking too much. No wahala on this one.",
+      "profile_summary": "generous reviewer with interest in Food, Drink; strongest preference cues: portion, spicy, sharing, affordable, filling; price sensitivity: high; spice preference: high; portion preference: sharing; tone: casual Nigerian English with mild Pidgin"
+    }
+  ]
+}
