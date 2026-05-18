@@ -17,12 +17,17 @@ class Settings(BaseSettings):
     data_dir: Path = Field(default=BASE_DIR / "data" / "sample")
     use_llm: bool = False
     openai_api_key: str | None = None
+    optional_llm_provider: str | None = None
+    optional_llm_api_key: str | None = None
+    enable_sentence_transformers: bool = False
+    sentence_transformer_model: str = "sentence-transformers/all-MiniLM-L6-v2"
 
-    semantic_weight: float = 0.30
-    preference_weight: float = 0.25
+    semantic_weight: float = 0.18
+    preference_weight: float = 0.38
     context_weight: float = 0.20
-    quality_weight: float = 0.15
+    quality_weight: float = 0.10
     nigerian_context_weight: float = 0.10
+    penalty_weight: float = 0.04
 
 
 @lru_cache

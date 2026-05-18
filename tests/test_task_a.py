@@ -41,6 +41,8 @@ def test_task_a_returns_rating_review_and_reasoning() -> None:
     payload = response.json()
     assert 1 <= payload["predicted_rating"] <= 5
     assert payload["generated_review"]
+    assert "On the details" not in payload["generated_review"]
+    assert 35 <= len(payload["generated_review"].split()) <= 100
     assert payload["behavioural_reasoning_summary"]
     assert payload["user_profile_summary"]
     assert isinstance(payload["positive_signals"], list)

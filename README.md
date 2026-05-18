@@ -1,31 +1,19 @@
-# Steward Systems BCT LLM Agent Challenge
+# Steward Systems Behavioural Intelligence Agent
 
-A Nigerian-contextualised behavioural intelligence agent for review simulation and personalised recommendation.
+**Nigerian-contextualised LLM agent for review simulation and personalised recommendation.**
 
-Built for **Team Steward Systems** in the **DSN x BCT LLM Agent Challenge / Data & AI Summit Hackathon 3.0**.
+Built by **Team Steward Systems** for the **DSN x BCT LLM Agent Challenge / Data & AI Summit Hackathon 3.0**.
 
-## Competition Tasks Covered
+## What This Project Does
 
-- **Task A: User Modelling / Review Simulation** - predicts a 1-5 star rating and generates a realistic review from user persona/history and item details.
-- **Task B: Personalised Recommendation** - returns ranked recommendations from persona, context, candidate domain, and local sample items.
+This repository contains a clean, local, container-ready AI agent application for both competition tasks:
 
-## Architecture Overview
+- **Task A - User Modelling / Review Simulation:** predicts a 1-5 rating and generates a realistic written review from a user persona/history and item details.
+- **Task B - Personalised Recommendation:** returns ranked recommendations with score breakdowns, context fit, cold-start handling, and Nigerian-context explanations.
 
-The application is a local FastAPI service with deterministic agent logic. Phase 2 strengthens the original foundation with richer behavioural profiling, transparent scoring breakdowns, and a larger Nigerian-context sample dataset:
+The system is deterministic by default. It does not require Supabase, authentication, a database, billing, or a paid API key.
 
-- `app/api/` contains thin FastAPI route handlers.
-- `app/agents/` orchestrates Task A and Task B workflows.
-- `app/services/` contains profile building, retrieval, rating prediction, review generation, ranking, and Nigerian context logic.
-- `UserProfileBuilder` extracts average rating, rating strictness, category affinity, positive preference signals, complaint signals, tone markers, price sensitivity, delivery sensitivity, spice tolerance, and portion preference.
-- `NigerianContextAdapter` scores affordability, value for money, pepper/spice fit, delivery delay, Lagos/context cues, group meals, and local food/drink matches.
-- `RecommendationRankingService` exposes the hybrid score components for each recommendation.
-- `data/sample/` contains small JSON data that runs out of the box.
-- `evaluation/` contains metric scripts for both tasks.
-- `frontend/streamlit_app.py` provides an optional local demo UI.
-
-No Supabase, authentication, RBAC, payments, or production SaaS complexity is included.
-
-## Setup
+## Quick Start
 
 ```bash
 python -m venv .venv
@@ -35,11 +23,11 @@ copy .env.example .env
 uvicorn app.main:app --reload
 ```
 
-Visit:
+Open:
 
-- [http://localhost:8000](http://localhost:8000)
-- [http://localhost:8000/docs](http://localhost:8000/docs)
-- [http://localhost:8000/health](http://localhost:8000/health)
+- `http://localhost:8000`
+- `http://localhost:8000/health`
+- `http://localhost:8000/docs`
 
 ## Docker
 
@@ -48,25 +36,27 @@ docker build -t steward-bct-agent .
 docker run -p 8000:8000 --env-file .env steward-bct-agent
 ```
 
-## Docker Compose
+Or:
 
 ```bash
 docker compose up --build
 ```
 
-## API Endpoints
+Docker build could not be verified in the current shell because Docker is not installed there, but the Dockerfile and Compose config are included.
 
-### `GET /`
+## Endpoints
 
-Returns project information and available endpoints.
+| Method | Path | Purpose |
+|---|---|---|
+| `GET` | `/` | Project info and endpoint list |
+| `GET` | `/health` | Health check |
+| `POST` | `/api/task-a/simulate-review` | Rating prediction and review generation |
+| `POST` | `/api/task-b/recommend` | Personalised ranked recommendations |
+| `GET` | `/docs` | Swagger/OpenAPI docs |
 
-### `GET /health`
+## Task A Example
 
-Returns service health.
-
-### `POST /api/task-a/simulate-review`
-
-Example request:
+Request:
 
 ```json
 {
@@ -88,6 +78,7 @@ Example request:
     "category": "Food",
     "price": 2500,
     "metadata": {
+      "spice_level": 4,
       "spicy": true,
       "delivery_time_minutes": 35,
       "portion_size": "medium",
@@ -97,138 +88,185 @@ Example request:
 }
 ```
 
-Example response fields:
+Expected response shape:
 
 ```json
 {
-  "predicted_rating": 4.4,
-  "generated_review": "The Spicy Chicken Shawarma was a solid option...",
-  "behavioural_reasoning_summary": "Predicted 4.4/5...",
-  "positive_signals": ["spice level matches the user's pepper preference"],
+  "predicted_rating": 5.0,
+  "generated_review": "Human-style review text...",
+  "behavioural_reasoning_summary": "Why the agent predicted this rating.",
+  "positive_signals": ["price looks reasonable for a budget-conscious Nigerian user"],
   "negative_signals": [],
-  "confidence": 0.62,
-  "user_profile_summary": "balanced reviewer with interest in Food..."
+  "confidence": 0.68,
+  "user_profile_summary": "generous reviewer with interest in Food..."
 }
 ```
 
-Curl example:
+## Task B Example
 
-```bash
-curl -X POST http://localhost:8000/api/task-a/simulate-review ^
-  -H "Content-Type: application/json" ^
-  -d "{\"user_persona\":{\"user_id\":\"demo\",\"description\":\"A Lagos student who likes affordable spicy food and quick delivery.\",\"past_reviews\":[]},\"item\":{\"item_id\":\"item_001\",\"name\":\"Spicy Chicken Shawarma\",\"category\":\"Food\",\"price\":2500,\"metadata\":{\"spice_level\":4,\"delivery_time_minutes\":35,\"portion_size\":\"medium\",\"location\":\"Lagos\",\"tags\":[\"shawarma\",\"spicy\",\"quick\"]}}}"
-```
-
-### `POST /api/task-b/recommend`
-
-Example request:
+Request:
 
 ```json
 {
   "user_persona": {
-    "user_id": "user_001",
-    "description": "A Lagos-based university student who prefers affordable spicy meals and quick delivery.",
+    "user_id": "cold_start_demo",
+    "description": "Cold-start Lagos visitor who wants affordable local food, not too much pepper, and quick delivery near Yaba.",
     "past_reviews": []
   },
-  "current_context": "Needs dinner after lectures and wants something filling but not expensive.",
+  "current_context": "Needs a light dinner after a long day.",
   "top_k": 5
 }
 ```
 
-Response includes ranked recommendations, score, reason, context fit explanation, cold-start note, and ranking formula.
+Expected response shape:
 
-Each recommendation includes:
-
-- `rank`
-- `item_id`
-- `item_name`
-- `category`
-- `final_score`
-- `score_breakdown`
-- `reason`
-- `context_fit`
-- `cold_start_note` when no past reviews are supplied
-
-Curl example:
-
-```bash
-curl -X POST http://localhost:8000/api/task-b/recommend ^
-  -H "Content-Type: application/json" ^
-  -d "{\"user_persona\":{\"user_id\":\"cold_start_demo\",\"description\":\"Cold-start Lagos visitor who wants affordable local food, not too much pepper, and quick delivery near Yaba.\",\"past_reviews\":[]},\"current_context\":\"Needs a light dinner after a long day.\",\"top_k\":5}"
+```json
+{
+  "recommendations": [
+    {
+      "rank": 1,
+      "item_id": "item_014",
+      "item_name": "Akara and Custard Combo",
+      "category": "Food",
+      "final_score": 0.52,
+      "score_breakdown": {
+        "semantic_similarity": 0.12,
+        "preference_match": 0.85,
+        "context_match": 0.34,
+        "item_quality_or_popularity": 0.71,
+        "nigerian_context_match": 0.88,
+        "penalty": 0.0
+      },
+      "reason": "Recommended because ...",
+      "context_fit": "price fits the current budget context",
+      "preference_match_explanation": "mild spice fits user tolerance; price fits a value-conscious profile",
+      "penalty_explanation": null,
+      "cold_start_note": "Cold-start mode used..."
+    }
+  ],
+  "profile_summary": "balanced reviewer...",
+  "cold_start_note": "Cold-start mode used...",
+  "ranking_formula": "final_score = ...",
+  "semantic_mode": "tfidf_fallback"
+}
 ```
 
-The ranking formula is:
+More examples are in [docs/sample_payloads.md](docs/sample_payloads.md).
+
+## Architecture
+
+| Component | File(s) | Role |
+|---|---|---|
+| FastAPI app | `app/main.py`, `app/api/` | Stable HTTP API |
+| Review simulation agent | `app/agents/review_simulation_agent.py` | Orchestrates Task A |
+| Recommendation agent | `app/agents/recommendation_agent.py` | Orchestrates Task B |
+| Profile builder | `app/services/user_profile_builder.py` | Rating strictness, preferences, complaints, tone, price/spice/portion signals |
+| Nigerian context adapter | `app/services/nigerian_context_adapter.py` | Affordability, delivery, pepper, portion, Lagos/local cues |
+| Semantic similarity | `app/services/semantic_similarity_service.py` | Optional sentence-transformer mode with TF-IDF fallback |
+| Ranking service | `app/services/recommendation_ranking_service.py` | Hybrid scoring, penalties, explanations |
+| Evaluation | `evaluation/` | Metrics, ablation, human rubric |
+
+## Recommendation Formula
+
+Selected by `scripts/tune_recommendation_weights.py` using a small explainable grid:
 
 ```text
-final_score = 0.30 semantic_similarity
-            + 0.25 preference_match
-            + 0.20 context_match
-            + 0.15 item_quality_or_popularity
-            + 0.10 nigerian_context_match
+final_score =
+  0.18 * semantic_similarity
++ 0.38 * preference_match
++ 0.20 * context_match
++ 0.10 * item_quality_or_popularity
++ 0.10 * nigerian_context_match
+- 0.04 * penalty
 ```
 
-If embeddings are not configured, the app uses deterministic TF-IDF-style lexical similarity.
+The default semantic mode is `tfidf_fallback`. Optional sentence-transformer mode can be enabled only when installed and explicitly configured:
+
+```bash
+set STEWARD_ENABLE_SENTENCE_TRANSFORMERS=true
+set STEWARD_SENTENCE_TRANSFORMER_MODEL=sentence-transformers/all-MiniLM-L6-v2
+```
+
+The default Docker build does not download model weights.
 
 ## Evaluation
+
+Run:
 
 ```bash
 python evaluation/evaluate_task_a.py
 python evaluation/evaluate_task_b.py
+python scripts/tune_recommendation_weights.py
 pytest
 ```
 
-Task A reports number of examples, RMSE, MAE, predicted-vs-actual samples, and qualitative generated-review samples. Task B reports Hit Rate@5, Hit Rate@10, NDCG@5, NDCG@10, and an ablation comparison:
+Current bundled-data metrics:
 
-- popularity/content baseline
-- hybrid ranking without Nigerian context
-- hybrid ranking with Nigerian context
+| Task | Metric | Value |
+|---|---:|---:|
+| Task A | RMSE | 0.703 |
+| Task A | MAE | 0.546 |
+| Task A | Avg generated review length | 70.9 words |
+| Task B | Hit Rate@5 | 0.429 |
+| Task B | Hit Rate@10 | 0.571 |
+| Task B | NDCG@5 | 0.155 |
+| Task B | NDCG@10 | 0.207 |
 
-Result files are written to:
+Task B uses a deterministic held-out split: early reviews form profile history, later reviews form test relevance labels, and known training items are removed from candidate pools.
+
+## Ablation Summary
+
+| Variant | HR@5 | HR@10 | NDCG@5 | NDCG@10 |
+|---|---:|---:|---:|---:|
+| Popularity baseline | 0.286 | 0.429 | 0.143 | 0.169 |
+| Content-only baseline | 0.000 | 0.286 | 0.000 | 0.048 |
+| Hybrid without Nigerian context | 0.286 | 0.571 | 0.121 | 0.194 |
+| Hybrid with Nigerian context | 0.429 | 0.571 | 0.155 | 0.207 |
+
+Full outputs:
 
 - `evaluation/results/task_a_results.json`
 - `evaluation/results/task_b_results.json`
 - `evaluation/results/ablation_summary.json`
+- `evaluation/results/ablation_summary.md`
+- `evaluation/results/recommendation_weight_tuning.json`
 
-## Optional Streamlit Demo
+Human evaluation support:
 
-```bash
-streamlit run frontend/streamlit_app.py
-```
-
-The demo has two tabs: **Simulate Review** and **Recommend Items**.
+- `evaluation/human_eval_rubric.md`
+- `evaluation/human_eval_examples.json`
 
 ## Dataset Disclosure
 
-The repository includes a lightweight synthetic sample dataset:
+The included dataset is lightweight synthetic/demo data designed for reproducibility:
 
 - 18 Nigerian-context user personas
-- 60 items across food, drinks, products, books, and movies
-- 160 sample reviews
-- cold-start users with no review history
-- metadata for price, `spice_level`, delivery time, portion size, location, tags, popularity score, and average rating
+- 60 items across food, drinks, books, movies, and everyday products
+- 160 reviews
+- cold-start personas
+- metadata for price, spice level, delivery time, portion size, location, tags, popularity score, and average rating
 
-The data is intentionally small for reproducibility. `data/raw/` is reserved for future datasets and ignored by git.
+It is not a production dataset. The architecture is designed so larger Yelp/Amazon/Goodreads-style datasets can be loaded later.
 
-## Model and Framework Disclosure
+## Reproducibility And Secrets
 
-The system uses deterministic, explainable Python services rather than a required LLM call. It includes lexical TF-IDF-style similarity implemented locally, profile heuristics, metadata scoring, and Nigerian-context rules. LLM integration is environment-gated through `.env` and can be added later without breaking deterministic fallback mode.
+- No paid API key is required.
+- No live database is required.
+- `.env.example` contains placeholders only.
+- No secrets are committed.
+- Deterministic fallback mode runs the full API, tests, and evaluation scripts offline after dependencies are installed.
 
-Deterministic fallback mode means judges can run the full API, tests, and evaluation scripts without an API key, network model call, live database, or hidden service.
+## Submission Deliverables Checklist
 
-## Nigerian Contextualisation
-
-The Nigerian context adapter interprets affordability, value for money, pepper/spice preference, portion size, delivery delay, Lagos traffic sensitivity, mainland/island cues, family/group meals, and light Nigerian English tone. It includes local examples such as jollof rice, suya, shawarma, amala, egusi, fried rice, pepper soup, asun, bole, zobo, Chapman, meat pie, puff-puff, grilled chicken, and small chops without turning the output into caricature.
-
-The adapter is used in two places:
-
-- Task A: adjusts rating prediction and review generation with local context signals.
-- Task B: contributes the `nigerian_context_match` score and explanation text.
-
-## Reproducibility Notes
-
-- Runs locally from JSON files.
-- Does not require a live database.
-- Does not require API keys.
-- Docker exposes FastAPI on port `8000`.
-- `.env.example` contains only safe placeholders.
-- Tests cover health, expanded sample data, Task A output shape, rating range, Task B output shape, cold-start recommendation, descending ranking scores, and evaluation script execution.
+- FastAPI app and `/docs`
+- Dockerfile and `docker-compose.yml`
+- `.env.example`
+- sample data
+- tests
+- evaluation scripts and result files
+- ablation summary
+- human evaluation rubric
+- demo script: [docs/demo_script.md](docs/demo_script.md)
+- sample payloads: [docs/sample_payloads.md](docs/sample_payloads.md)
+- solution paper draft: [papers/solution_paper_draft.md](papers/solution_paper_draft.md)
+- final checklist: [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md)

@@ -108,7 +108,17 @@ class UserProfileBuilder:
             for category, count in all_category_counts.items()
         }
         review_text = " ".join(review.review for review in persona.past_reviews)
-        combined_text = f"{persona.description} {review_text}"
+        positive_item_text = " ".join(
+            f"{review.item_name} {review.category}"
+            for review in persona.past_reviews
+            if review.rating >= 4
+        )
+        negative_item_text = " ".join(
+            f"{review.item_name} {review.category}"
+            for review in persona.past_reviews
+            if review.rating <= 2
+        )
+        combined_text = f"{persona.description} {review_text} {positive_item_text} {positive_item_text} {negative_item_text}"
         tokens = tokenize(combined_text)
         token_counts = Counter(token for token in tokens if len(token) > 2)
 

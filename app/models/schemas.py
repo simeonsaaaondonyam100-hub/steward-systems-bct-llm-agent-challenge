@@ -63,6 +63,8 @@ class RecommendationItem(BaseModel):
     reason: str
     context_fit: str
     context_fit_explanation: str
+    preference_match_explanation: str
+    penalty_explanation: str | None = None
     cold_start_note: str | None = None
     metadata: dict[str, Any] = Field(default_factory=dict)
 
@@ -72,6 +74,7 @@ class RecommendResponse(BaseModel):
     profile_summary: str
     cold_start_note: str
     ranking_formula: str
+    semantic_mode: str
 
 
 class HealthResponse(BaseModel):

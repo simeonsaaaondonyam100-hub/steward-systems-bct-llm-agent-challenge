@@ -1,20 +1,39 @@
 {
-  "popularity_content_baseline": {
-    "hit_rate@5": 0.375,
-    "hit_rate@10": 0.4375,
-    "ndcg@5": 0.2127,
-    "ndcg@10": 0.235
+  "popularity_baseline": {
+    "hit_rate@5": 0.2857,
+    "hit_rate@10": 0.4286,
+    "ndcg@5": 0.1429,
+    "ndcg@10": 0.1692
+  },
+  "content_only_baseline": {
+    "hit_rate@5": 0.0,
+    "hit_rate@10": 0.2857,
+    "ndcg@5": 0.0,
+    "ndcg@10": 0.0478
   },
   "hybrid_without_nigerian_context": {
-    "hit_rate@5": 0.25,
-    "hit_rate@10": 0.5625,
-    "ndcg@5": 0.1684,
-    "ndcg@10": 0.259
+    "hit_rate@5": 0.2857,
+    "hit_rate@10": 0.5714,
+    "ndcg@5": 0.1211,
+    "ndcg@10": 0.1939
   },
   "hybrid_with_nigerian_context": {
-    "hit_rate@5": 0.25,
-    "hit_rate@10": 0.5625,
-    "ndcg@5": 0.164,
-    "ndcg@10": 0.252
+    "hit_rate@5": 0.4286,
+    "hit_rate@10": 0.5714,
+    "ndcg@5": 0.1546,
+    "ndcg@10": 0.2074
+  },
+  "hybrid_with_semantic_embeddings_if_available": {
+    "semantic_mode": "tfidf_fallback",
+    "metrics": {
+      "hit_rate@5": 0.4286,
+      "hit_rate@10": 0.5714,
+      "ndcg@5": 0.1546,
+      "ndcg@10": 0.2074
+    }
+  },
+  "cold_start_only": {
+    "num_examples": 2,
+    "contextual_fit@5": 1.0
   }
 }

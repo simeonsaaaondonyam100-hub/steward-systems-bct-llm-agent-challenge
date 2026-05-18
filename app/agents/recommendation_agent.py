@@ -7,8 +7,9 @@ from app.services.user_profile_builder import UserProfileBuilder
 
 class RecommendationAgent:
     ranking_formula = (
-        "final_score = 0.30 * semantic_similarity + 0.25 * preference_match + "
-        "0.20 * context_match + 0.15 * item_quality_or_popularity + 0.10 * nigerian_context_match"
+        "final_score = 0.18 * semantic_similarity + 0.38 * preference_match + "
+        "0.20 * context_match + 0.10 * item_quality_or_popularity + 0.10 * nigerian_context_match "
+        "- 0.04 * penalty"
     )
 
     def __init__(self) -> None:
@@ -49,6 +50,8 @@ class RecommendationAgent:
                     reason=reason,
                     context_fit=context,
                     context_fit_explanation=context,
+                    preference_match_explanation=entry["preference_explanation"],
+                    penalty_explanation=entry["penalty_explanation"],
                     cold_start_note=cold_start_note if not request.user_persona.past_reviews else None,
                     metadata=item.get("metadata", {}),
                 )
@@ -59,4 +62,5 @@ class RecommendationAgent:
             profile_summary=profile.summary,
             cold_start_note=cold_start_note,
             ranking_formula=self.ranking_formula,
+            semantic_mode=self.ranking_service.semantic_mode,
         )

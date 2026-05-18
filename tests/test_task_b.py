@@ -33,10 +33,14 @@ def test_task_b_returns_ranked_recommendations() -> None:
     assert 0 <= first["score"] <= 1
     assert first["final_score"] == first["score"]
     assert first["score_breakdown"]
+    assert "penalty" in first["score_breakdown"]
     assert first["context_fit"]
+    assert first["preference_match_explanation"]
+    assert "penalty_explanation" in first
     assert "cold_start_note" in first
     assert first["reason"]
     assert first["context_fit_explanation"]
+    assert payload["semantic_mode"]
 
 
 def test_task_b_scores_are_sorted_descending() -> None:

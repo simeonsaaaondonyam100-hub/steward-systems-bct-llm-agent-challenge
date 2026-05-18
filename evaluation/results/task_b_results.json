@@ -1,14 +1,19 @@
 {
-  "num_users": 16,
+  "num_users": 7,
+  "held_out_examples": 21,
+  "cold_start_examples": 2,
+  "sparse_history_examples": 0,
+  "normal_history_examples": 7,
   "metrics": {
-    "hit_rate@5": 0.25,
-    "hit_rate@10": 0.5625,
-    "ndcg@5": 0.164,
-    "ndcg@10": 0.252
+    "hit_rate@5": 0.4286,
+    "hit_rate@10": 0.5714,
+    "ndcg@5": 0.1546,
+    "ndcg@10": 0.2074
   },
   "k_values": [
     5,
     10
   ],
-  "notes": "Positive items are sample reviews with rating >= 4."
+  "semantic_mode": "tfidf_fallback",
+  "notes": "Held-out reviews are later review rows per user; train items are removed from candidates."
 }

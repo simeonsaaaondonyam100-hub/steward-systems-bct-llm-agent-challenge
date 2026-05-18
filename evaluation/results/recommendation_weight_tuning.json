@@ -1,0 +1,128 @@
+{
+  "selection_note": "Small explainable grid over reasonable weights. Objective balances NDCG@10, Hit Rate@10, NDCG@5, and Hit Rate@5; sentence-transformers are disabled during tuning for reproducibility.",
+  "best_weights": {
+    "semantic_weight": 0.18,
+    "preference_weight": 0.38,
+    "context_weight": 0.2,
+    "quality_weight": 0.1,
+    "nigerian_context_weight": 0.1,
+    "penalty_weight": 0.04
+  },
+  "best_metrics": {
+    "hit_rate@5": 0.4286,
+    "hit_rate@10": 0.5714,
+    "ndcg@5": 0.1546,
+    "ndcg@10": 0.2074
+  },
+  "best_objective": 0.31838,
+  "all_runs": [
+    {
+      "weights": {
+        "semantic_weight": 0.18,
+        "preference_weight": 0.38,
+        "context_weight": 0.2,
+        "quality_weight": 0.1,
+        "nigerian_context_weight": 0.1,
+        "penalty_weight": 0.04
+      },
+      "metrics": {
+        "hit_rate@5": 0.4286,
+        "hit_rate@10": 0.5714,
+        "ndcg@5": 0.1546,
+        "ndcg@10": 0.2074
+      },
+      "semantic_mode": "tfidf_fallback",
+      "objective": 0.31838
+    },
+    {
+      "weights": {
+        "semantic_weight": 0.21,
+        "preference_weight": 0.33,
+        "context_weight": 0.22,
+        "quality_weight": 0.1,
+        "nigerian_context_weight": 0.11,
+        "penalty_weight": 0.03
+      },
+      "metrics": {
+        "hit_rate@5": 0.4286,
+        "hit_rate@10": 0.5714,
+        "ndcg@5": 0.1546,
+        "ndcg@10": 0.2074
+      },
+      "semantic_mode": "tfidf_fallback",
+      "objective": 0.31838
+    },
+    {
+      "weights": {
+        "semantic_weight": 0.26,
+        "preference_weight": 0.3,
+        "context_weight": 0.18,
+        "quality_weight": 0.1,
+        "nigerian_context_weight": 0.12,
+        "penalty_weight": 0.04
+      },
+      "metrics": {
+        "hit_rate@5": 0.4286,
+        "hit_rate@10": 0.5714,
+        "ndcg@5": 0.1546,
+        "ndcg@10": 0.2063
+      },
+      "semantic_mode": "tfidf_fallback",
+      "objective": 0.317995
+    },
+    {
+      "weights": {
+        "semantic_weight": 0.2,
+        "preference_weight": 0.36,
+        "context_weight": 0.18,
+        "quality_weight": 0.12,
+        "nigerian_context_weight": 0.1,
+        "penalty_weight": 0.04
+      },
+      "metrics": {
+        "hit_rate@5": 0.4286,
+        "hit_rate@10": 0.5714,
+        "ndcg@5": 0.15,
+        "ndcg@10": 0.2017
+      },
+      "semantic_mode": "tfidf_fallback",
+      "objective": 0.315235
+    },
+    {
+      "weights": {
+        "semantic_weight": 0.24,
+        "preference_weight": 0.31,
+        "context_weight": 0.18,
+        "quality_weight": 0.12,
+        "nigerian_context_weight": 0.12,
+        "penalty_weight": 0.03
+      },
+      "metrics": {
+        "hit_rate@5": 0.4286,
+        "hit_rate@10": 0.5714,
+        "ndcg@5": 0.15,
+        "ndcg@10": 0.2006
+      },
+      "semantic_mode": "tfidf_fallback",
+      "objective": 0.31485
+    },
+    {
+      "weights": {
+        "semantic_weight": 0.22,
+        "preference_weight": 0.34,
+        "context_weight": 0.2,
+        "quality_weight": 0.11,
+        "nigerian_context_weight": 0.1,
+        "penalty_weight": 0.03
+      },
+      "metrics": {
+        "hit_rate@5": 0.4286,
+        "hit_rate@10": 0.5714,
+        "ndcg@5": 0.147,
+        "ndcg@10": 0.1987
+      },
+      "semantic_mode": "tfidf_fallback",
+      "objective": 0.313435
+    }
+  ]
+}

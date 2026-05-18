@@ -14,6 +14,7 @@ class ReviewGenerationService:
         details = self._feature_sentence(item, prediction)
         local_line = self.context_adapter.local_review_line(rating, metadata)
         item_detail = self._item_detail(metadata)
+        tone_bridge = self._tone_bridge(profile, rating)
 
         if rating >= 4.5:
             opener = self._pick(profile, [
@@ -65,7 +66,7 @@ class ReviewGenerationService:
         elif "Pidgin" in profile.tone_style and rating >= 4:
             closer = f"{closer} No wahala on this one."
 
-        return " ".join(part for part in [opener, item_detail, details, local_line, closer] if part)
+        return " ".join(part for part in [opener, item_detail, details, local_line, tone_bridge, closer] if part)
 
     def reasoning_summary(self, profile: UserProfile, item: ItemInput, prediction: RatingPrediction) -> str:
         tone = self.context_adapter.tone_hint(prediction.rating)
@@ -79,9 +80,9 @@ class ReviewGenerationService:
 
     def _feature_sentence(self, item: ItemInput, prediction: RatingPrediction) -> str:
         if prediction.positive_signals and prediction.negative_signals:
-            return f"The best part is that {prediction.positive_signals[0]}, although {prediction.negative_signals[0]}."
+            return f"I liked that {prediction.positive_signals[0]}, but {prediction.negative_signals[0]}."
         if prediction.positive_signals:
-            return f"What stood out is that {prediction.positive_signals[0]}."
+            return f"The strongest point for me was that {prediction.positive_signals[0]}."
         if prediction.negative_signals:
             return f"My main issue is that {prediction.negative_signals[0]}."
         price = f" at NGN {int(item.price):,}" if item.price else ""
@@ -90,14 +91,50 @@ class ReviewGenerationService:
     def _item_detail(self, metadata: dict) -> str:
         details = []
         if metadata.get("delivery_time_minutes"):
-            details.append(f"delivery was around {metadata['delivery_time_minutes']} minutes")
+            minutes = int(metadata["delivery_time_minutes"])
+            if minutes <= 30:
+                details.append("delivery was quick")
+            elif minutes <= 50:
+                details.append(f"delivery took about {minutes} minutes")
+            else:
+                details.append(f"delivery stretched to about {minutes} minutes")
         if metadata.get("portion_size"):
-            details.append(f"portion size was {metadata['portion_size']}")
+            portion = metadata["portion_size"]
+            if portion in {"large", "family", "sharing"}:
+                details.append(f"the {portion} portion made sense")
+            else:
+                details.append(f"the portion was {portion}")
         if metadata.get("spice_level") is not None:
-            details.append(f"spice level felt like {metadata['spice_level']}/5")
+            spice = int(metadata["spice_level"])
+            if spice >= 4:
+                details.append("the pepper was noticeable")
+            elif spice <= 1:
+                details.append("the spice was mild")
+            else:
+                details.append("the spice level was balanced")
         if not details:
             return ""
-        return "On the details, " + ", ".join(details[:3]) + "."
+        return self._join_naturally(details[:3]) + "."
+
+    def _tone_bridge(self, profile: UserProfile, rating: float) -> str:
+        if profile.price_sensitivity_level == "high" and rating >= 3.5:
+            return "For the price, it felt like a sensible pick."
+        if profile.time_sensitive and rating < 4:
+            return "Timing matters to me, so that part affected the experience."
+        if profile.portion_preference == "sharing" and rating >= 4:
+            return "It also works for sharing, which is important for my kind of order."
+        if profile.rating_strictness > 0.55 and rating >= 4:
+            return "I am not usually easy to impress, so that says something."
+        if profile.rating_strictness < 0.35 and rating < 3.5:
+            return "Even as someone who gives places room, this one had clear gaps."
+        return ""
+
+    def _join_naturally(self, parts: list[str]) -> str:
+        if len(parts) == 1:
+            return parts[0].capitalize()
+        if len(parts) == 2:
+            return f"{parts[0].capitalize()} and {parts[1]}"
+        return f"{parts[0].capitalize()}, {parts[1]}, and {parts[2]}"
 
     def _pick(self, profile: UserProfile, options: list[str]) -> str:
         seed = (profile.user_id or profile.description) + profile.tone_style

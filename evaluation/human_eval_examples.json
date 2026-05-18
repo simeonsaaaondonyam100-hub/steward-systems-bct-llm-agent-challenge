@@ -1,0 +1,93 @@
+[
+  {
+    "case_id": "task_a_student_shawarma",
+    "task": "Task A",
+    "input": {
+      "user_persona": {
+        "user_id": "user_001",
+        "description": "Price-sensitive Lagos university student who likes spicy affordable meals and quick delivery.",
+        "past_reviews": [
+          {
+            "item_name": "Jollof Rice and Grilled Chicken",
+            "category": "Food",
+            "rating": 5,
+            "review": "Jollof was smoky, filling, and worth the price."
+          }
+        ]
+      },
+      "item": {
+        "item_id": "item_001",
+        "name": "Spicy Chicken Shawarma",
+        "category": "Food",
+        "price": 2500
+      }
+    },
+    "model_output": {
+      "expected_shape": "High rating, concrete shawarma review, price/spice/delivery positives, student-budget tone."
+    },
+    "suggested_human_evaluation_notes": "Strong if the review distinguishes affordable student value from generic food praise.",
+    "expected_strong_points": ["behavioural fidelity", "Nigerian contextual naturalness", "item specificity"],
+    "expected_weak_points": ["may still be slightly template-like if signals are listed too directly"]
+  },
+  {
+    "case_id": "task_a_strict_slow_expensive",
+    "task": "Task A",
+    "input": {
+      "user_persona": {
+        "user_id": "user_011",
+        "description": "Very strict reviewer who complains about late delivery, cold food, careless packaging, and inflated prices.",
+        "past_reviews": []
+      },
+      "item": {
+        "item_id": "item_020",
+        "name": "Premium Sushi Box",
+        "category": "Food",
+        "price": 18500
+      }
+    },
+    "model_output": {
+      "expected_shape": "Low or mixed rating with direct complaints about price, portion, and delivery."
+    },
+    "suggested_human_evaluation_notes": "Strong if the review is strict without becoming abusive.",
+    "expected_strong_points": ["rating-review consistency", "tone realism"],
+    "expected_weak_points": ["Nigerian context may be lighter because the item is less local"]
+  },
+  {
+    "case_id": "task_b_cold_start_yaba",
+    "task": "Task B",
+    "input": {
+      "user_persona": {
+        "user_id": "user_015",
+        "description": "Cold-start Lagos visitor who wants affordable local food, not too much pepper, and quick delivery near Yaba.",
+        "past_reviews": []
+      },
+      "current_context": "Needs a light dinner after a long day.",
+      "top_k": 5
+    },
+    "model_output": {
+      "expected_shape": "Affordable local food, mild or moderate spice, quick delivery, clear cold-start note."
+    },
+    "suggested_human_evaluation_notes": "Strong if recommendations avoid very spicy premium items and explain the cold-start basis.",
+    "expected_strong_points": ["cold-start quality", "contextual relevance", "Nigerian contextual fit"],
+    "expected_weak_points": ["may need more location precision with real vendor data"]
+  },
+  {
+    "case_id": "task_b_book_movie_user",
+    "task": "Task B",
+    "input": {
+      "user_persona": {
+        "user_id": "user_007",
+        "description": "Book and movie lover who enjoys Nigerian stories, zobo or Chapman with snacks, and calm weekend plans.",
+        "past_reviews": []
+      },
+      "current_context": "Wants a relaxed weekend plan at home.",
+      "top_k": 5
+    },
+    "model_output": {
+      "expected_shape": "Nigerian books/movies plus suitable drink/snack options if cross-domain is useful."
+    },
+    "suggested_human_evaluation_notes": "Strong if cross-domain recommendations feel like a coherent weekend bundle.",
+    "expected_strong_points": ["cross-domain usefulness", "recommendation usefulness"],
+    "expected_weak_points": ["ranking may over-prioritise food if context is underspecified"]
+  }
+]
