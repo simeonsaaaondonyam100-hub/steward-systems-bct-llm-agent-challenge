@@ -1,6 +1,6 @@
 from typing import Any
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 from app.utils.text_utils import is_placeholder_text
 
@@ -59,8 +59,19 @@ class SimulateReviewResponse(BaseModel):
 class RecommendRequest(BaseModel):
     user_persona: UserPersona
     current_context: str | None = None
-    candidate_domain: str | None = None
+    candidate_domain: str | None = Field(
+        default=None,
+        description="Optional category/domain filter. The Swagger example also accepts category as a friendly alias.",
+    )
     top_k: int = Field(default=5, ge=1, le=20)
+
+    @model_validator(mode="before")
+    @classmethod
+    def accept_category_alias(cls, values: object) -> object:
+        if isinstance(values, dict) and "candidate_domain" not in values and "category" in values:
+            values = dict(values)
+            values["candidate_domain"] = values.get("category")
+        return values
 
     @field_validator("candidate_domain")
     @classmethod
