@@ -12,8 +12,12 @@ venv/
 
 data/raw/*
 !data/raw/.gitkeep
+data/raw/yelp/
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/yelp/
+data/processed/yelp/*.json
+!data/processed/yelp/README.md
 
 .DS_Store
 .idea/

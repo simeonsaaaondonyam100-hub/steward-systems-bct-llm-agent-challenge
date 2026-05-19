@@ -248,6 +248,37 @@ The included dataset is lightweight synthetic/demo data designed for reproducibi
 
 It is not a production dataset. The architecture is designed so larger Yelp/Amazon/Goodreads-style datasets can be loaded later.
 
+## Optional Real Dataset Ingestion: Yelp Open Dataset
+
+The default judge-friendly demo uses the bundled `data/sample/` files. The repository also includes an optional converter for small Yelp Open Dataset subsets. The full Yelp dataset is large and is not bundled or required.
+
+Expected input files:
+
+- `yelp_academic_dataset_business.json`
+- `yelp_academic_dataset_review.json`
+- `yelp_academic_dataset_user.json` optional
+
+Example:
+
+```bash
+python scripts/ingest_yelp_subset.py ^
+  --business-file data/raw/yelp/yelp_academic_dataset_business.json ^
+  --review-file data/raw/yelp/yelp_academic_dataset_review.json ^
+  --user-file data/raw/yelp/yelp_academic_dataset_user.json ^
+  --output-dir data/processed/yelp ^
+  --max-reviews 5000 ^
+  --category-filter Restaurants
+```
+
+The script streams JSONL line by line and writes:
+
+- `data/processed/yelp/users.json`
+- `data/processed/yelp/items.json`
+- `data/processed/yelp/reviews.json`
+- `data/processed/yelp/README.md`
+
+Generated Yelp JSON files are ignored by git. To experiment with a processed subset, set `STEWARD_DATA_DIR=data/processed/yelp`. Default startup remains unchanged.
+
 ## Reproducibility And Secrets
 
 - No paid API key is required.

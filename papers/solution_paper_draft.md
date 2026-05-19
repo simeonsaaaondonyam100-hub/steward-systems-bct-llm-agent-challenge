@@ -78,6 +78,8 @@ Items include Nigerian examples such as jollof rice, suya, shawarma, pepper soup
 
 For Task B evaluation, the system uses a deterministic held-out split. For each user with enough reviews, earlier reviews become profile history while later reviews become test relevance labels. Items already present in profile history are removed from the candidate pool, which prevents recommending the exact consumed item from the training profile.
 
+The repository also includes optional Yelp Open Dataset ingestion support. Because the full Yelp dataset is large, it is not bundled in the repository. Instead, `scripts/ingest_yelp_subset.py` maps Yelp JSONL business and review files into the same user-item-review schema used by the agent, writing a small processed subset under `data/processed/yelp/` when the user supplies local Yelp files.
+
 ## 4. System Architecture
 
 The system is implemented as a Python FastAPI application. API routes are intentionally thin; business logic lives in agents and services.
