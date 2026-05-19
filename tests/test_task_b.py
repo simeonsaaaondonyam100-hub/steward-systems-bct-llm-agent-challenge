@@ -93,6 +93,7 @@ def test_task_b_valid_food_context_returns_food_recommendations() -> None:
     assert all(item["category"] == "Food" for item in recommendations)
     assert all(item["reason"] and "Breakdown:" not in item["reason"] for item in recommendations)
     assert all(item["score_breakdown"] for item in recommendations)
+    assert "Personal history mode used" in response.json()["cold_start_note"]
 
 
 def test_task_b_cold_start_request_returns_recommendations() -> None:
@@ -120,8 +121,20 @@ def test_task_b_placeholder_persona_has_honest_cold_start_explanations() -> None
     response = client.post(
         "/api/task-b/recommend",
         json={
-            "user_persona": {"user_id": "placeholder", "description": "string", "past_reviews": []},
+            "user_persona": {
+                "user_id": "placeholder",
+                "description": "string",
+                "past_reviews": [
+                    {
+                        "item_name": "string",
+                        "category": "string",
+                        "rating": 5,
+                        "review": "string",
+                    }
+                ],
+            },
             "current_context": "string",
+            "candidate_domain": "string",
             "top_k": 3,
         },
     )
@@ -129,7 +142,37 @@ def test_task_b_placeholder_persona_has_honest_cold_start_explanations() -> None
     assert response.status_code == 200
     payload = response.json()
     assert "Cold-start" in payload["cold_start_note"]
+    assert (
+        payload["cold_start_note"]
+        == "Cold-start mode used: placeholder or insufficient profile history was ignored, so recommendations are based on broad popularity, item quality, and Nigerian-context fit."
+    )
+    assert "Personal history mode used" not in payload["cold_start_note"]
+    assert "limited profile evidence" in payload["profile_summary"]
     assert "string" not in payload["profile_summary"].lower()
     for recommendation in payload["recommendations"]:
         assert "semantic/text similarity" not in recommendation["context_fit"]
         assert "cold-start popularity and broad Nigerian-context fit" in recommendation["context_fit"]
+        assert recommendation["cold_start_note"] == payload["cold_start_note"]
+
+
+def test_task_b_book_and_product_reasons_do_not_use_portion_language() -> None:
+    for category in ["Book", "Product"]:
+        response = client.post(
+            "/api/task-b/recommend",
+            json={
+                "user_persona": {
+                    "user_id": f"{category.lower()}_user",
+                    "description": f"A Lagos reader and shopper looking for reliable {category.lower()} options with good quality signals.",
+                    "past_reviews": [],
+                },
+                "current_context": f"Wants a useful {category.lower()} recommendation with strong quality signals.",
+                "candidate_domain": category,
+                "top_k": 3,
+            },
+        )
+
+        assert response.status_code == 200
+        recommendations = response.json()["recommendations"]
+        assert recommendations
+        assert all(item["category"] == category for item in recommendations)
+        assert all("portion" not in item["reason"].lower() for item in recommendations)

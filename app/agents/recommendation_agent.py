@@ -28,10 +28,11 @@ class RecommendationAgent:
             top_k=request.top_k,
         )
         recommendations = []
+        has_real_history = profile.history_count > 0
         cold_start_note = (
-            "Cold-start mode used: no past reviews supplied, so ranking relies on persona text, current context, "
-            "item metadata, and Nigerian-context rules."
-            if not request.user_persona.past_reviews
+            "Cold-start mode used: placeholder or insufficient profile history was ignored, so recommendations "
+            "are based on broad popularity, item quality, and Nigerian-context fit."
+            if not has_real_history
             else "Personal history mode used: past reviews influenced profile strictness, preferences, and complaints."
         )
         for index, entry in enumerate(ranked, start=1):
@@ -52,7 +53,7 @@ class RecommendationAgent:
                     context_fit_explanation=context,
                     preference_match_explanation=entry["preference_explanation"],
                     penalty_explanation=entry["penalty_explanation"],
-                    cold_start_note=cold_start_note if not request.user_persona.past_reviews else None,
+                    cold_start_note=cold_start_note if not has_real_history else None,
                     metadata=item.get("metadata", {}),
                 )
             )

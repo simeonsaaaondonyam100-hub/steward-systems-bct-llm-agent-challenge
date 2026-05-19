@@ -239,8 +239,12 @@ class RecommendationRankingService:
         ranked_entry: dict[str, Any],
     ) -> str:
         name = item["name"]
-        tags = [str(tag) for tag in item.get("metadata", {}).get("tags", [])[:3]]
         category = item.get("category", "item").lower()
+        tags = [
+            str(tag)
+            for tag in item.get("metadata", {}).get("tags", [])
+            if category in {"food", "drink", "restaurant"} or "portion" not in str(tag).lower()
+        ][:3]
         portion = item.get("metadata", {}).get("portion_size")
         price = item.get("price")
         delivery = item.get("metadata", {}).get("delivery_time_minutes")
@@ -258,11 +262,21 @@ class RecommendationRankingService:
 
         details = []
         if tags:
-            details.append(f"especially around {', '.join(tags)}")
-        if portion in {"large", "family", "sharing"}:
-            details.append(f"with a {portion} portion")
-        elif portion:
-            details.append(f"with a {portion} portion")
+            if category == "book":
+                details.append(f"with reader appeal around {', '.join(tags)}")
+            elif category == "product":
+                details.append(f"with practical usefulness around {', '.join(tags)}")
+            else:
+                details.append(f"especially around {', '.join(tags)}")
+        if category in {"food", "drink", "restaurant"}:
+            if portion in {"large", "family", "sharing"}:
+                details.append(f"with a {portion} portion")
+            elif portion:
+                details.append(f"with a {portion} portion")
+        elif category == "book":
+            details.append("with clear literary relevance and quality signals")
+        elif category == "product":
+            details.append("with practical usefulness and quality signals")
         if price and float(price) <= 3500:
             details.append("at a value-conscious price")
         if delivery and int(delivery) <= 35:

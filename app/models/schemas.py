@@ -65,6 +65,8 @@ class RecommendRequest(BaseModel):
     @field_validator("candidate_domain")
     @classmethod
     def normalize_domain(cls, value: str | None) -> str | None:
+        if is_placeholder_text(value):
+            return None
         return value.strip().lower() if value else None
 
 
