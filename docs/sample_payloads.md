@@ -1,5 +1,7 @@
 # Sample Payloads
 
+Use these realistic request bodies when testing through `http://localhost:8000/docs`. Swagger/OpenAPI's default `"string"`, `0`, and `{}` placeholders only describe schema shape; they are not recommended test inputs.
+
 ## Task A Request
 
 ```json
@@ -38,6 +40,7 @@
 ```json
 {
   "predicted_rating": 5.0,
+  "predicted_star_rating": 5,
   "generated_review": "The generated review text appears here.",
   "behavioural_reasoning_summary": "Reasoning summary appears here.",
   "positive_signals": ["signal"],

@@ -54,6 +54,25 @@ Docker build could not be verified in the current shell because Docker is not in
 | `POST` | `/api/task-b/recommend` | Personalised ranked recommendations |
 | `GET` | `/docs` | Swagger/OpenAPI docs |
 
+## Testing the API in Swagger Docs
+
+After starting the server, open:
+
+```text
+http://localhost:8000/docs
+```
+
+Swagger/OpenAPI automatically displays schema placeholders such as `"string"`, `0`, and `{}`. These placeholders show the request shape only; they are not meaningful user inputs and should not be used as real test cases.
+
+For proper testing, open [docs/sample_payloads.md](docs/sample_payloads.md). Copy one of the realistic Task A or Task B payloads, paste it into the Swagger request body, and click **Execute**.
+
+- Task A endpoint: `POST /api/task-a/simulate-review`
+- Task B endpoint: `POST /api/task-b/recommend`
+
+The API includes guardrails for placeholder inputs. Task A rejects placeholder-only item names/categories with validation errors, while Task B treats insufficient or placeholder-only profile evidence as cold-start input.
+
+The default judging path uses the bundled `data/sample/` files. Optional Yelp Open Dataset ingestion is available for real-dataset experimentation, but it is not required to run or evaluate the default containerised demo.
+
 ## Task A Example
 
 Request:
