@@ -19,6 +19,8 @@ def test_root_lists_available_endpoints() -> None:
     response = client.get("/")
 
     assert response.status_code == 200
-    payload = response.json()
-    assert "Task A" in payload["tasks"]["task_a"]
-    assert "/api/task-a/simulate-review" in payload["endpoints"]
+    assert "text/html" in response.headers["content-type"]
+    assert "Steward Systems Behavioural Intelligence Agent" in response.text
+    assert "Task A - Review Simulation" in response.text
+    assert "/docs" in response.text
+    assert "/health" in response.text
