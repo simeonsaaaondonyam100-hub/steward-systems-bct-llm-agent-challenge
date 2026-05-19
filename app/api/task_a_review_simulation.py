@@ -1,5 +1,3 @@
-from typing import Annotated
-
 from fastapi import APIRouter, Body, HTTPException
 
 from app.agents.review_simulation_agent import ReviewSimulationAgent
@@ -56,18 +54,17 @@ TASK_A_OPENAPI_EXAMPLE = {
     ),
 )
 def simulate_review(
-    request: Annotated[
-        SimulateReviewRequest,
-        Body(
-            openapi_examples={
-                "lagos_student_shawarma": {
-                    "summary": "Lagos student reviewing spicy shawarma",
-                    "description": "A realistic Task A request using Nigerian food, price, delivery, and portion signals.",
-                    "value": TASK_A_OPENAPI_EXAMPLE,
-                }
+    request: SimulateReviewRequest = Body(
+        ...,
+        examples=[TASK_A_OPENAPI_EXAMPLE],
+        openapi_examples={
+            "lagos_student_shawarma": {
+                "summary": "Lagos student reviewing spicy chicken shawarma",
+                "description": "A realistic Task A payload with persona, past reviews, and item metadata.",
+                "value": TASK_A_OPENAPI_EXAMPLE,
             }
-        ),
-    ],
+        },
+    ),
 ) -> SimulateReviewResponse:
     try:
         return agent.simulate(request)

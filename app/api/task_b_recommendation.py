@@ -1,5 +1,3 @@
-from typing import Annotated
-
 from fastapi import APIRouter, Body, HTTPException
 
 from app.agents.recommendation_agent import RecommendationAgent
@@ -58,18 +56,17 @@ TASK_B_OPENAPI_EXAMPLE = {
     ),
 )
 def recommend(
-    request: Annotated[
-        RecommendRequest,
-        Body(
-            openapi_examples={
-                "lagos_student_dinner": {
-                    "summary": "Lagos student dinner recommendation",
-                    "description": "A realistic Task B request using Nigerian food preferences, dislikes, and current context.",
-                    "value": TASK_B_OPENAPI_EXAMPLE,
-                }
+    request: RecommendRequest = Body(
+        ...,
+        examples=[TASK_B_OPENAPI_EXAMPLE],
+        openapi_examples={
+            "lagos_student_dinner": {
+                "summary": "Lagos student dinner recommendation",
+                "description": "A realistic Task B request using Nigerian food preferences, dislikes, and current context.",
+                "value": TASK_B_OPENAPI_EXAMPLE,
             }
-        ),
-    ],
+        },
+    ),
 ) -> RecommendResponse:
     try:
         return agent.recommend(request)
