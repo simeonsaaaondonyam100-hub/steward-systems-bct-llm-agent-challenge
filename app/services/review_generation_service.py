@@ -2,6 +2,7 @@ from app.models.schemas import ItemInput
 from app.services.nigerian_context_adapter import NigerianContextAdapter
 from app.services.rating_prediction_service import RatingPrediction
 from app.services.user_profile_builder import UserProfile
+from app.utils.text_utils import clean_placeholder_text
 
 
 class ReviewGenerationService:
@@ -11,6 +12,7 @@ class ReviewGenerationService:
     def generate(self, profile: UserProfile, item: ItemInput, prediction: RatingPrediction) -> str:
         rating = prediction.rating
         metadata = item.metadata
+        item_name = clean_placeholder_text(item.name) or "this item"
         details = self._feature_sentence(item, prediction)
         local_line = self.context_adapter.local_review_line(rating, metadata)
         item_detail = self._item_detail(metadata)
@@ -18,9 +20,9 @@ class ReviewGenerationService:
 
         if rating >= 4.5:
             opener = self._pick(profile, [
-                f"I really enjoyed the {item.name}.",
-                f"The {item.name} worked very well for me.",
-                f"This {item.name} delivered the kind of experience I was hoping for.",
+                f"I really enjoyed {item_name}.",
+                f"{item_name} worked very well for me.",
+                f"{item_name} delivered the kind of experience I was hoping for.",
             ])
             closer = self._pick(profile, [
                 "I would order it again without thinking too much.",
@@ -29,9 +31,9 @@ class ReviewGenerationService:
             ])
         elif rating >= 3.5:
             opener = self._pick(profile, [
-                f"The {item.name} was a solid option.",
-                f"I had a decent experience with the {item.name}.",
-                f"The {item.name} mostly did what I needed.",
+                f"{item_name} was a solid option.",
+                f"I had a decent experience with {item_name}.",
+                f"{item_name} mostly did what I needed.",
             ])
             closer = self._pick(profile, [
                 "It is worth trying if the price and timing work for you.",
@@ -40,9 +42,9 @@ class ReviewGenerationService:
             ])
         elif rating >= 2.5:
             opener = self._pick(profile, [
-                f"The {item.name} was just okay for me.",
-                f"I was a bit mixed on the {item.name}.",
-                f"The {item.name} had some good points, but it did not fully land.",
+                f"{item_name} was just okay for me.",
+                f"I was a bit mixed on {item_name}.",
+                f"{item_name} had some good points, but it did not fully land.",
             ])
             closer = self._pick(profile, [
                 "I might try something else next time unless they improve the weak parts.",
@@ -51,9 +53,9 @@ class ReviewGenerationService:
             ])
         else:
             opener = self._pick(profile, [
-                f"I was not impressed with the {item.name}.",
-                f"The {item.name} did not meet my expectations.",
-                f"This {item.name} was disappointing for what it promised.",
+                f"I was not impressed with {item_name}.",
+                f"{item_name} did not meet my expectations.",
+                f"{item_name} was disappointing for what it promised.",
             ])
             closer = self._pick(profile, [
                 "For the money, I expected a better experience.",

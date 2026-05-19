@@ -70,3 +70,22 @@ def test_task_b_cold_start_request_returns_recommendations() -> None:
     assert len(payload["recommendations"]) == 3
     assert "Cold-start" in payload["cold_start_note"]
     assert all(item["cold_start_note"] for item in payload["recommendations"])
+
+
+def test_task_b_placeholder_persona_has_honest_cold_start_explanations() -> None:
+    response = client.post(
+        "/api/task-b/recommend",
+        json={
+            "user_persona": {"user_id": "placeholder", "description": "string", "past_reviews": []},
+            "current_context": "string",
+            "top_k": 3,
+        },
+    )
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert "Cold-start" in payload["cold_start_note"]
+    assert "string" not in payload["profile_summary"].lower()
+    for recommendation in payload["recommendations"]:
+        assert "semantic/text similarity" not in recommendation["context_fit"]
+        assert "cold-start popularity and broad Nigerian-context fit" in recommendation["context_fit"]

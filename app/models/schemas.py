@@ -2,6 +2,8 @@ from typing import Any
 
 from pydantic import BaseModel, Field, field_validator
 
+from app.utils.text_utils import is_placeholder_text
+
 
 class PastReview(BaseModel):
     item_name: str
@@ -23,6 +25,20 @@ class ItemInput(BaseModel):
     price: float | None = Field(default=None, ge=0)
     metadata: dict[str, Any] = Field(default_factory=dict)
 
+    @field_validator("name")
+    @classmethod
+    def reject_placeholder_name(cls, value: str) -> str:
+        if is_placeholder_text(value):
+            raise ValueError("item.name must be a real item name, not a placeholder")
+        return value.strip()
+
+    @field_validator("category")
+    @classmethod
+    def reject_placeholder_category(cls, value: str) -> str:
+        if is_placeholder_text(value):
+            raise ValueError("item.category must be a real category, not a placeholder")
+        return value.strip()
+
 
 class SimulateReviewRequest(BaseModel):
     user_persona: UserPersona
@@ -31,6 +47,7 @@ class SimulateReviewRequest(BaseModel):
 
 class SimulateReviewResponse(BaseModel):
     predicted_rating: float
+    predicted_star_rating: int = Field(ge=1, le=5)
     generated_review: str
     behavioural_reasoning_summary: str
     positive_signals: list[str]

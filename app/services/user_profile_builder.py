@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 from app.models.schemas import PastReview, UserPersona
 from app.services.nigerian_context_adapter import NigerianContextAdapter
-from app.utils.text_utils import tokenize
+from app.utils.text_utils import clean_placeholder_text, is_placeholder_text, tokenize
 
 
 @dataclass
@@ -28,12 +28,19 @@ class UserProfile:
     portion_preference: str
     nigerian_context: bool
     history_count: int
+    limited_profile_evidence: bool
 
     @property
     def summary(self) -> str:
+        if self.limited_profile_evidence:
+            return (
+                "limited profile evidence; using cold-start defaults; "
+                f"price sensitivity: {self.price_sensitivity_level}; spice preference: {self.spice_preference}; "
+                f"portion preference: {self.portion_preference}; tone: {self.tone_style}"
+            )
         strictness = "strict" if self.rating_strictness > 0.55 else "generous" if self.rating_strictness < 0.35 else "balanced"
         preferences = ", ".join(self.preferred_terms[:5]) or "general quality"
-        categories = ", ".join(self.preferred_categories[:3]) or "cross-domain"
+        categories = ", ".join(self.preferred_categories[:3]) or "limited category evidence"
         return (
             f"{strictness} reviewer with interest in {categories}; strongest preference cues: {preferences}; "
             f"price sensitivity: {self.price_sensitivity_level}; spice preference: {self.spice_preference}; "
@@ -90,40 +97,42 @@ class UserProfileBuilder:
         self.context_adapter = context_adapter or NigerianContextAdapter()
 
     def build(self, persona: UserPersona) -> UserProfile:
-        ratings = [review.rating for review in persona.past_reviews]
-        average_rating = sum(ratings) / len(ratings) if ratings else 3.7
+        real_reviews = [review for review in persona.past_reviews if self._has_real_review_evidence(review)]
+        clean_description = clean_placeholder_text(persona.description)
+        ratings = [review.rating for review in real_reviews]
+        average_rating = sum(ratings) / len(ratings) if ratings else 3.5
         spread_penalty = 0.0
         if ratings:
             low_ratings = sum(1 for rating in ratings if rating <= 2)
             spread_penalty = low_ratings / len(ratings) * 0.25
         rating_strictness = max(0.0, min(1.0, (4.6 - average_rating) / 2.6 + spread_penalty))
 
-        category_counts = Counter(review.category for review in persona.past_reviews if review.rating >= 4)
-        inferred_categories = self._infer_categories_from_text(persona.description)
+        category_counts = Counter(clean_placeholder_text(review.category) for review in real_reviews if review.rating >= 4 and not is_placeholder_text(review.category))
+        inferred_categories = self._infer_categories_from_text(clean_description)
         for category in inferred_categories:
             category_counts[category] += 2
-        all_category_counts = Counter(review.category for review in persona.past_reviews)
+        all_category_counts = Counter(clean_placeholder_text(review.category) for review in real_reviews if not is_placeholder_text(review.category))
         category_affinity = {
             category: round(category_counts.get(category, 0) / max(count, 1), 2)
             for category, count in all_category_counts.items()
         }
-        review_text = " ".join(review.review for review in persona.past_reviews)
+        review_text = " ".join(clean_placeholder_text(review.review) for review in real_reviews)
         positive_item_text = " ".join(
-            f"{review.item_name} {review.category}"
-            for review in persona.past_reviews
-            if review.rating >= 4
+            f"{clean_placeholder_text(review.item_name)} {clean_placeholder_text(review.category)}"
+            for review in real_reviews
+            if review.rating >= 4 and not is_placeholder_text(review.item_name)
         )
         negative_item_text = " ".join(
-            f"{review.item_name} {review.category}"
-            for review in persona.past_reviews
-            if review.rating <= 2
+            f"{clean_placeholder_text(review.item_name)} {clean_placeholder_text(review.category)}"
+            for review in real_reviews
+            if review.rating <= 2 and not is_placeholder_text(review.item_name)
         )
-        combined_text = f"{persona.description} {review_text} {positive_item_text} {positive_item_text} {negative_item_text}"
+        combined_text = f"{clean_description} {review_text} {positive_item_text} {positive_item_text} {negative_item_text}"
         tokens = tokenize(combined_text)
-        token_counts = Counter(token for token in tokens if len(token) > 2)
+        token_counts = Counter(token for token in tokens if len(token) > 2 and not is_placeholder_text(token))
 
         preferred = [term for term, _ in token_counts.most_common() if term in self.positive_terms]
-        if not preferred:
+        if not preferred and clean_description:
             preferred = [term for term, _ in token_counts.most_common(8)]
 
         complaints = [term for term, _ in token_counts.most_common() if term in self.complaint_terms]
@@ -135,7 +144,7 @@ class UserProfileBuilder:
 
         return UserProfile(
             user_id=persona.user_id,
-            description=persona.description,
+            description=clean_description,
             average_rating=average_rating,
             rating_strictness=rating_strictness,
             preferred_categories=[category for category, _ in category_counts.most_common()],
@@ -153,7 +162,8 @@ class UserProfileBuilder:
             cares_about_portion=signals["cares_about_portion"],
             portion_preference=portion_preference,
             nigerian_context=signals["nigerian_context"],
-            history_count=len(persona.past_reviews),
+            history_count=len(real_reviews),
+            limited_profile_evidence=not clean_description and not real_reviews,
         )
 
     def _infer_tone(self, reviews: list[PastReview]) -> str:
@@ -207,3 +217,10 @@ class UserProfileBuilder:
         if any(term in lowered for term in ["product", "electronics", "durable", "grocery", "router", "power bank", "fan"]):
             categories.append("Product")
         return categories
+
+    def _has_real_review_evidence(self, review: PastReview) -> bool:
+        return not (
+            is_placeholder_text(review.item_name)
+            and is_placeholder_text(review.category)
+            and is_placeholder_text(review.review)
+        )

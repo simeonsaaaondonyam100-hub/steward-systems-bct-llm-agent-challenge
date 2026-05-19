@@ -6,7 +6,7 @@ from app.services.nigerian_context_adapter import NigerianContextAdapter
 from app.services.retrieval_service import RetrievalService
 from app.services.semantic_similarity_service import SemanticSimilarityService
 from app.services.user_profile_builder import UserProfile
-from app.utils.text_utils import clamp, keyword_overlap_score
+from app.utils.text_utils import clamp, clean_placeholder_text, keyword_overlap_score
 
 
 class RecommendationRankingService:
@@ -38,7 +38,8 @@ class RecommendationRankingService:
         if not candidates:
             candidates = items
 
-        query = f"{profile.description} {' '.join(profile.preferred_terms)} {current_context or ''}"
+        clean_context = clean_placeholder_text(current_context)
+        query = f"{profile.description} {' '.join(profile.preferred_terms)} {clean_context}"
         item_texts = [self.item_profile_builder.build_text(item) for item in candidates]
         self.semantic_service.fit_or_load_corpus(item_texts)
         self.semantic_mode = self.semantic_service.mode
@@ -60,11 +61,11 @@ class RecommendationRankingService:
             item_text = self.item_profile_builder.build_text(item)
             semantic = semantic_scores[item["item_id"]]
             preference, preference_explanation = self._preference_match(profile, item, item_text)
-            context, context_explanation = self._context_match(profile, item, item_text, current_context)
+            context, context_explanation = self._context_match(profile, item, item_text, clean_context)
             quality = self._quality_score(metadata)
             nigerian, positives, negatives = self.context_adapter.score_item_context(
                 user_text=profile.description,
-                context_text=current_context,
+                context_text=clean_context,
                 item_metadata=metadata,
                 item_name=item.get("name", ""),
             )
@@ -147,6 +148,8 @@ class RecommendationRankingService:
         current_context: str | None,
     ) -> tuple[float, str]:
         context_text = current_context or profile.description
+        if not clean_placeholder_text(context_text) and profile.limited_profile_evidence:
+            return 0.0, "Recommended from cold-start popularity and broad Nigerian-context fit"
         score = self.semantic_service.similarity(context_text, item_text)
         reasons = []
         metadata = item.get("metadata", {})
@@ -166,7 +169,9 @@ class RecommendationRankingService:
         if any(term in lowered for term in ["budget", "cheap", "not expensive"]) and float(item.get("price") or 0) <= 3500:
             score += 0.16
             reasons.append("price fits the current budget context")
-        return clamp(score, 0.0, 1.0), "; ".join(reasons) or "context fit comes from semantic/text similarity"
+        if score == 0 and not reasons:
+            return 0.0, "Recommended from cold-start popularity and broad Nigerian-context fit"
+        return clamp(score, 0.0, 1.0), "; ".join(reasons) or "text similarity offers a weak contextual signal"
 
     def _quality_score(self, metadata: dict[str, Any]) -> float:
         quality = metadata.get("average_rating", metadata.get("quality_score", 3.5))

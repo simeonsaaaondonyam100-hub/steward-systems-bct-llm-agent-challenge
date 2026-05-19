@@ -19,6 +19,7 @@ class ReviewSimulationAgent:
         reasoning = self.review_service.reasoning_summary(profile, request.item, prediction)
         return SimulateReviewResponse(
             predicted_rating=prediction.rating,
+            predicted_star_rating=round(prediction.rating),
             generated_review=review,
             behavioural_reasoning_summary=reasoning,
             positive_signals=prediction.positive_signals,

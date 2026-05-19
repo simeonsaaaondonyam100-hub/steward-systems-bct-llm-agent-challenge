@@ -62,6 +62,9 @@ class RatingPredictionService:
             negatives.append("portion size conflicts with the user's usual need")
 
         rounded_rating = round(clamp(rating, 1.0, 5.0), 1)
+        if rounded_rating < 3 and not negatives:
+            negatives.append("limited evidence that this item matches the user's preferences or context")
+            rounded_rating = max(rounded_rating, 2.5)
         confidence = self._confidence(profile.history_count, abs(context_score - 0.5), preference_match)
         return RatingPrediction(
             rating=rounded_rating,
@@ -83,6 +86,10 @@ class RatingPredictionService:
             positives.append("item has strong sample popularity")
         if metadata.get("delivery_time_minutes", 0) and int(metadata.get("delivery_time_minutes", 0)) >= 75:
             adjustment -= 0.25
+            negatives.append("delivery time is likely too slow for a satisfying experience")
+        if isinstance(quality_score, int | float) and quality_score <= 3.1:
+            adjustment -= 0.12
+            negatives.append("sample item metadata suggests weaker quality")
         return adjustment
 
     def _confidence(self, history_count: int, context_distance: float, preference_match: float) -> float:
