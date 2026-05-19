@@ -222,11 +222,7 @@ class RecommendationRankingService:
         negatives = ranked_entry["negative_context"]
         context_explanation = ranked_entry["context_explanation"]
         strongest = max(components, key=components.get)
-        breakdown = ", ".join(f"{key.replace('_', ' ')}={value:.2f}" for key, value in components.items())
-        reason = (
-            f"Recommended because {item['name']} scores strongest on {strongest.replace('_', ' ')}. "
-            f"Breakdown: {breakdown}."
-        )
+        reason = self._natural_reason(item, components, strongest, ranked_entry)
         if positives:
             context = f"{positives[0]}; {context_explanation}"
         elif negatives:
@@ -234,3 +230,46 @@ class RecommendationRankingService:
         else:
             context = context_explanation
         return reason, context
+
+    def _natural_reason(
+        self,
+        item: dict[str, Any],
+        components: dict[str, float],
+        strongest: str,
+        ranked_entry: dict[str, Any],
+    ) -> str:
+        name = item["name"]
+        tags = [str(tag) for tag in item.get("metadata", {}).get("tags", [])[:3]]
+        category = item.get("category", "item").lower()
+        portion = item.get("metadata", {}).get("portion_size")
+        price = item.get("price")
+        delivery = item.get("metadata", {}).get("delivery_time_minutes")
+
+        if strongest == "preference_match":
+            base = f"{name} ranks highly because it closely matches the user's taste profile"
+        elif strongest == "context_match":
+            base = f"{name} ranks highly because it fits the current need"
+        elif strongest == "nigerian_context_match":
+            base = f"{name} is a strong match because it carries practical Nigerian-context cues"
+        elif strongest == "item_quality_or_popularity":
+            base = f"{name} stands out because it combines reliable quality signals with broad appeal"
+        else:
+            base = f"{name} is recommended because it fits the user's profile better than most alternatives"
+
+        details = []
+        if tags:
+            details.append(f"especially around {', '.join(tags)}")
+        if portion in {"large", "family", "sharing"}:
+            details.append(f"with a {portion} portion")
+        elif portion:
+            details.append(f"with a {portion} portion")
+        if price and float(price) <= 3500:
+            details.append("at a value-conscious price")
+        if delivery and int(delivery) <= 35:
+            details.append("with delivery timing that suits a quick order")
+        if components.get("penalty", 0) > 0:
+            details.append("though there are a few fit concerns to watch")
+
+        if details:
+            return base + ", " + ", ".join(details[:3]) + "."
+        return base + f" as a relevant {category} option."

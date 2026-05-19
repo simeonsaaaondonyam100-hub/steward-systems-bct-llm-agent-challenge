@@ -128,7 +128,7 @@ class NigerianContextAdapter:
     def local_review_line(self, rating: float, metadata: dict[str, Any]) -> str:
         location = metadata.get("location")
         if rating >= 4 and self._spice_level(metadata) >= 4:
-            return "The pepper was present in a good way, not just noise."
+            return "The pepper had flavour without overpowering the meal."
         if rating >= 4 and location:
             return f"For {location}, it felt like good value."
         if rating <= 2 and metadata.get("delivery_time_minutes", 0) >= 60:

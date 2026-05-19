@@ -39,6 +39,8 @@ def test_task_b_returns_ranked_recommendations() -> None:
     assert "penalty_explanation" in first
     assert "cold_start_note" in first
     assert first["reason"]
+    assert not first["reason"].startswith("Breakdown:")
+    assert "Breakdown:" not in first["reason"]
     assert first["context_fit_explanation"]
     assert payload["semantic_mode"]
 
@@ -49,6 +51,48 @@ def test_task_b_scores_are_sorted_descending() -> None:
     assert response.status_code == 200
     scores = [item["score"] for item in response.json()["recommendations"]]
     assert scores == sorted(scores, reverse=True)
+
+
+def test_task_b_valid_food_context_returns_food_recommendations() -> None:
+    response = client.post(
+        "/api/task-b/recommend",
+        json={
+            "user_persona": {
+                "user_id": "user_002",
+                "description": "A Lagos-based university student who likes spicy food, affordable meals, filling portions, and quick delivery. He dislikes expensive meals with small portions and slow delivery.",
+                "past_reviews": [
+                    {
+                        "item_name": "Suya Platter",
+                        "category": "Food",
+                        "rating": 5,
+                        "review": "Fresh, spicy, affordable, and very satisfying. The pepper was just right and the portion was worth the price.",
+                    },
+                    {
+                        "item_name": "Burger Meal",
+                        "category": "Food",
+                        "rating": 2,
+                        "review": "Too expensive for the portion. Delivery was slow and the food was already cold when it arrived.",
+                    },
+                    {
+                        "item_name": "Jollof Rice and Chicken",
+                        "category": "Food",
+                        "rating": 4,
+                        "review": "The jollof had good smoky flavour and the chicken was tasty. The portion was fair for the price.",
+                    },
+                ],
+            },
+            "current_context": "Needs dinner after lectures and wants something filling, spicy, affordable, and not too slow to deliver.",
+            "candidate_domain": "Food",
+            "top_k": 5,
+        },
+    )
+
+    assert response.status_code == 200
+    recommendations = response.json()["recommendations"]
+    assert len(recommendations) == 5
+    assert all(item["category"] == "Food" for item in recommendations)
+    assert all(item["reason"] and "Breakdown:" not in item["reason"] for item in recommendations)
+    assert all(item["score_breakdown"] for item in recommendations)
 
 
 def test_task_b_cold_start_request_returns_recommendations() -> None:

@@ -40,8 +40,19 @@ def test_task_a_returns_rating_review_and_reasoning() -> None:
     assert response.status_code == 200
     payload = response.json()
     assert 1 <= payload["predicted_rating"] <= 5
+    assert 1 <= payload["predicted_star_rating"] <= 5
     assert payload["generated_review"]
+    assert "Spicy Chicken Shawarma" in payload["generated_review"]
     assert "On the details" not in payload["generated_review"]
+    forbidden_review_phrases = [
+        "target item",
+        "stated preferences",
+        "user's stated",
+        "preference cues",
+        "item signals",
+        "not just noise",
+    ]
+    assert not any(phrase in payload["generated_review"].lower() for phrase in forbidden_review_phrases)
     assert 35 <= len(payload["generated_review"].split()) <= 100
     assert payload["behavioural_reasoning_summary"]
     assert payload["user_profile_summary"]

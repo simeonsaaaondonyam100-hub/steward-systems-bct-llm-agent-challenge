@@ -82,11 +82,11 @@ class ReviewGenerationService:
 
     def _feature_sentence(self, item: ItemInput, prediction: RatingPrediction) -> str:
         if prediction.positive_signals and prediction.negative_signals:
-            return f"I liked that {prediction.positive_signals[0]}, but {prediction.negative_signals[0]}."
+            return f"I liked that {self._human_signal(prediction.positive_signals[0], positive=True)}, but {self._human_signal(prediction.negative_signals[0], positive=False)}."
         if prediction.positive_signals:
-            return f"The strongest point for me was that {prediction.positive_signals[0]}."
+            return f"What stood out most was that {self._human_signal(prediction.positive_signals[0], positive=True)}."
         if prediction.negative_signals:
-            return f"My main issue is that {prediction.negative_signals[0]}."
+            return f"My main issue is that {self._human_signal(prediction.negative_signals[0], positive=False)}."
         price = f" at NGN {int(item.price):,}" if item.price else ""
         return f"It feels like a practical {item.category.lower()} choice{price}."
 
@@ -141,3 +141,26 @@ class ReviewGenerationService:
     def _pick(self, profile: UserProfile, options: list[str]) -> str:
         seed = (profile.user_id or profile.description) + profile.tone_style
         return options[sum(ord(char) for char in seed) % len(options)]
+
+    def _human_signal(self, signal: str, positive: bool) -> str:
+        lowered = signal.lower()
+        replacements = [
+            ("target item overlaps with the user's stated preferences", "it had the flavour and value I usually prefer"),
+            ("user has previously rated food items positively", "it fits the kind of food I usually enjoy"),
+            ("price looks reasonable for a budget-conscious nigerian user", "the price felt sensible"),
+            ("spice level matches the user's pepper preference", "the spice level worked well with the meal"),
+            ("delivery time is realistic for a quick lagos order", "the delivery time was fair for Lagos"),
+            ("item carries familiar nigerian food or drink cues", "it felt familiar in a good Nigerian food way"),
+            ("sample item metadata suggests strong quality", "the overall quality felt reliable"),
+            ("item has strong sample popularity", "it is clearly a popular choice"),
+            ("price sensitivity suggests this item may feel too expensive", "the price may feel too high"),
+            ("spice level may be higher than the user's tolerance", "the pepper may be too much"),
+            ("portion size conflicts with the user's usual need", "the portion may not be enough"),
+            ("delivery time is likely too slow for a satisfying experience", "the delivery time may be too slow"),
+            ("sample item metadata suggests weaker quality", "the quality does not look strong enough"),
+            ("limited evidence that this item matches the user's preferences or context", "it does not clearly fit what I would usually choose"),
+        ]
+        for internal, human in replacements:
+            if lowered == internal:
+                return human
+        return signal.rstrip(".")

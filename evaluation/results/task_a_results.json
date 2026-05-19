@@ -2,7 +2,7 @@
   "num_examples": 160,
   "rmse": 0.7029,
   "mae": 0.5463,
-  "generated_review_average_words": 70.0,
+  "generated_review_average_words": 69.3,
   "sample_predictions": [
     {
       "user_id": "user_001",
@@ -65,31 +65,31 @@
     {
       "user_id": "user_001",
       "item_name": "Spicy Chicken Shawarma",
-      "generated_review": "I really enjoyed Spicy Chicken Shawarma. Delivery took about 35 minutes, the portion was medium, and the pepper was noticeable. The strongest point for me was that target item overlaps with the user's stated preferences. The pepper was present in a good way, not just noise. For the price, it felt like a sensible pick. I would order it again without thinking too much. No wahala on this one.",
+      "generated_review": "I really enjoyed Spicy Chicken Shawarma. Delivery took about 35 minutes, the portion was medium, and the pepper was noticeable. What stood out most was that it had the flavour and value I usually prefer. The pepper had flavour without overpowering the meal. For the price, it felt like a sensible pick. I would order it again without thinking too much. No wahala on this one.",
       "profile_summary": "generous reviewer with interest in Food, Drink; strongest preference cues: sharing, portion, smooth, spicy, affordable; price sensitivity: high; spice preference: high; portion preference: sharing; tone: casual Nigerian English with mild Pidgin"
     },
     {
       "user_id": "user_001",
       "item_name": "Bole and Fish Combo",
-      "generated_review": "I really enjoyed Bole and Fish Combo. Delivery took about 50 minutes, the large portion made sense, and the pepper was noticeable. The strongest point for me was that target item overlaps with the user's stated preferences. The pepper was present in a good way, not just noise. For the price, it felt like a sensible pick. I would order it again without thinking too much. No wahala on this one.",
+      "generated_review": "I really enjoyed Bole and Fish Combo. Delivery took about 50 minutes, the large portion made sense, and the pepper was noticeable. What stood out most was that it had the flavour and value I usually prefer. The pepper had flavour without overpowering the meal. For the price, it felt like a sensible pick. I would order it again without thinking too much. No wahala on this one.",
       "profile_summary": "generous reviewer with interest in Food, Drink; strongest preference cues: spicy, sharing, portion, smooth, affordable; price sensitivity: high; spice preference: high; portion preference: sharing; tone: casual Nigerian English with mild Pidgin"
     },
     {
       "user_id": "user_001",
       "item_name": "Grilled Chicken Salad Bowl",
-      "generated_review": "I really enjoyed Grilled Chicken Salad Bowl. Delivery took about 35 minutes, the portion was medium, and the spice was mild. I liked that target item overlaps with the user's stated preferences, but item may be too mild for the user's stated taste. For Victoria Island, it felt like good value. For the price, it felt like a sensible pick. I would order it again without thinking too much. No wahala on this one.",
+      "generated_review": "I really enjoyed Grilled Chicken Salad Bowl. Delivery took about 35 minutes, the portion was medium, and the spice was mild. I liked that it had the flavour and value I usually prefer, but item may be too mild for the user's stated taste. For Victoria Island, it felt like good value. For the price, it felt like a sensible pick. I would order it again without thinking too much. No wahala on this one.",
       "profile_summary": "generous reviewer with interest in Food, Drink; strongest preference cues: spicy, portion, sharing, affordable, filling; price sensitivity: high; spice preference: high; portion preference: sharing; tone: casual Nigerian English with mild Pidgin"
     },
     {
       "user_id": "user_001",
       "item_name": "Puff-Puff Sharing Bowl",
-      "generated_review": "I really enjoyed Puff-Puff Sharing Bowl. Delivery was quick, the sharing portion made sense, and the spice was mild. I liked that target item overlaps with the user's stated preferences, but item may be too mild for the user's stated taste. For Lagos Mainland, it felt like good value. For the price, it felt like a sensible pick. I would order it again without thinking too much. No wahala on this one.",
+      "generated_review": "I really enjoyed Puff-Puff Sharing Bowl. Delivery was quick, the sharing portion made sense, and the spice was mild. I liked that it had the flavour and value I usually prefer, but item may be too mild for the user's stated taste. For Lagos Mainland, it felt like good value. For the price, it felt like a sensible pick. I would order it again without thinking too much. No wahala on this one.",
       "profile_summary": "generous reviewer with interest in Food, Drink; strongest preference cues: spicy, portion, smooth, affordable, filling; price sensitivity: high; spice preference: high; portion preference: large; tone: casual Nigerian English with mild Pidgin"
     },
     {
       "user_id": "user_001",
       "item_name": "Office Lunch Rice Bowl",
-      "generated_review": "I really enjoyed Office Lunch Rice Bowl. Delivery was quick, the portion was medium, and the spice level was balanced. The strongest point for me was that target item overlaps with the user's stated preferences. For Victoria Island, it felt like good value. For the price, it felt like a sensible pick. I would order it again without thinking too much. No wahala on this one.",
+      "generated_review": "I really enjoyed Office Lunch Rice Bowl. Delivery was quick, the portion was medium, and the spice level was balanced. What stood out most was that it had the flavour and value I usually prefer. For Victoria Island, it felt like good value. For the price, it felt like a sensible pick. I would order it again without thinking too much. No wahala on this one.",
       "profile_summary": "generous reviewer with interest in Food, Drink; strongest preference cues: spicy, portion, sharing, affordable, filling; price sensitivity: high; spice preference: high; portion preference: sharing; tone: casual Nigerian English with mild Pidgin"
     }
   ]
