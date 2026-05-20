@@ -44,6 +44,12 @@ docker compose up --build
 
 Docker build could not be verified in the current shell because Docker is not installed there, but the Dockerfile and Compose config are included.
 
+## Live Deployment Notes
+
+The app is Docker-ready for platforms such as Render or Railway. The container starts FastAPI with `uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}`, so it binds to `0.0.0.0` and uses the platform-provided `PORT` when available while defaulting to `8000` locally.
+
+For Render/Railway, create a service from the GitHub repository and select the included Dockerfile. No required secrets are needed for the default deterministic demo. Optional LLM settings and optional Yelp Open Dataset ingestion are available for experimentation, but they are not required for the default judge-facing deployment.
+
 ## Endpoints
 
 | Method | Path | Purpose |
